@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux基础 on Virgo</title>
+    <link>https://www.wuennan.cn/categories/linux%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in Linux基础 on Virgo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 11 May 2023 18:04:31 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/categories/linux%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux文件管理</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/3.-linux%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Thu, 11 May 2023 18:04:31 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/3.-linux%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</guid>
+      <description>目录规范 在Linux中一切皆文件，这些文件按照一定的规则存放在不同的目录当中。为了能够快速找到文件及以后的操作的规范性，我们必须记清楚Linux的目录结构。 **</description>
+    </item>
+    
+    <item>
+      <title>认识Bash Shell</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/2.-%E8%AE%A4%E8%AF%86bash-shell/</link>
+      <pubDate>Thu, 11 May 2023 17:43:31 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/2.-%E8%AE%A4%E8%AF%86bash-shell/</guid>
+      <description>初识Shell Shell是命令解释器，将用户输入的命令翻译给内核，内核处理完成之后，将结果返回Bash。Shell充当的是人与内核之间的翻译官。 Linux系统的</description>
+    </item>
+    
+    <item>
+      <title>虚拟机安装CentOS7</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/1.-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85centos7/</link>
+      <pubDate>Thu, 11 May 2023 14:43:31 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/1.-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85centos7/</guid>
+      <description>在初学Linux阶段，我们通常会使用虚拟机运行一个Linux的操作系统以供练习。 常用的虚拟机软件有 VMware Workstation，VirtualBox，Hyper-V</description>
+    </item>
+    
+  </channel>
+</rss>
