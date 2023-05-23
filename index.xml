@@ -6,14 +6,23 @@
     <description>Recent content on Ennan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 11 May 2023 18:04:31 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 20:13:41 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux常用命令</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/4.-linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sun, 21 May 2023 20:13:41 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/4.-linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>本章节，我们将学习 Linux 系统中常用的命令。 路径切换 比如: /etc/hostname，整个文件中包含文件名称以及文件所在的位置，我们将这个叫做路径，也就是说我们是通过</description>
+    </item>
+    
     <item>
       <title>Linux文件管理</title>
       <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/3.-linux%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</link>
-      <pubDate>Thu, 11 May 2023 18:04:31 +0800</pubDate>
+      <pubDate>Sat, 20 May 2023 18:04:31 +0800</pubDate>
       
       <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/3.-linux%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/</guid>
-      <description>目录规范 在Linux中一切皆文件，这些文件按照一定的规则存放在不同的目录当中。为了能够快速找到文件及以后的操作的规范性，我们必须记清楚Linux的目录结构。 **</description>
+      <description>目录规范 在Linux中一切皆文件，这些文件按照一定的规则存放在不同的目录当中。为了能够快速找到文件及以后的操作的规范性，我们必须记清楚Linux的目录结构。 Windows: 以</description>
     </item>
     
     <item>
@@ -49,7 +58,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.wuennan.cn/nav/</guid>
-      <description>🏈 Linux基础 1. 虚拟机安装CentOS7 2. 认识Bash Shell 3. Linux文件管理 🔨 K8S Kubernetes集群搭建 📑 分类 THREE docitem one docitem two docitem three 📑 测试 THREE docitem one docitem two docitem three 🔖 标签 BOOKMARKs bookmark</description>
+      <description>🏈 Linux基础 1. 虚拟机安装CentOS7 2. 认识Bash Shell 3. Linux文件管理 4. Linux常用命令 5. Vim编辑器 6. 用户与组 7. Linux基础权限 8. Linux输入与</description>
     </item>
     
   </channel>
