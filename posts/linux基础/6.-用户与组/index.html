@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="用户与组 - https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/6.-%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84/">
+    <meta name="author" content="Wuennan - https://www.wuennan.cn/">
+    
+    <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" />
+    <title>用户与组</title>
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="https://www.wuennan.cn/style.min.ab1affb864595dc8034de89700f09bcace7cadcc73a0e800a66ae137a366f17d.css">
+    
+    <script type="text/javascript" src="/main.js" defer></script>
+    
+</head>
+<body class="active-animate cool">
+        <div id="header"><div class="container-header">
+    <div id="vars" class="container-vars" style="display: none;">
+	{
+		"isSingleColumnOfPostList": true,
+		"hasFoldAllCodeBlocks": false,
+		"svgColor": "",
+		"en": false,
+		"dark": false
+	}
+</div>
+    <h1 class="title">
+        
+            用户与组
+            
+        
+    </h1>
+
+    <div class="container-breadcrumb-nav">
+    
+    <div class="breadcrumb-nav-bar">
+        <div><a href="/"><svg t="1656411084410" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2954" width="16" height="16"><path d="M947.5 390.6l-377-290c-34.5-26.5-82.6-26.5-117.1 0l-377 290c-14 10.8-16.6 30.9-5.9 44.9 10.8 14 30.9 16.6 44.9 5.9l28.5-21.9V768c0 88.2 71.8 160 160 160h80c35.3 0 64-28.7 64-64V640c0-17.6 14.4-32 32-32h64c17.6 0 32 14.4 32 32v224c0 35.3 28.7 64 64 64h80c88.2 0 160-71.8 160-160V419.4l28.5 21.9c5.8 4.5 12.7 6.6 19.5 6.6 9.6 0 19.1-4.3 25.4-12.5 10.8-13.9 8.2-34-5.8-44.8zM816 768c0 52.9-43.1 96-96 96h-80V640c0-52.9-43.1-96-96-96h-64c-52.9 0-96 43.1-96 96v224h-80c-52.9 0-96-43.1-96-96V370.2l284.5-218.8c11.5-8.8 27.5-8.8 39 0L816 370.2V768z" fill="#6c757d" p-id="2955"></path></svg></a></div>
+        <div><a href="/nav"><svg t="1656411531924" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5827" width="16" height="16"><path d="M849.59197473 125.23018519L139.22930586 391.72854662a23.35052669 23.35052669 0 0 0-14.95414244 21.65490745c-0.12257519 9.70384955 5.61801843 18.46795771 14.40255493 22.04306141l318.42928099 129.25528056 119.51057092 320.39047893c3.06437293 8.23295069 10.35758221 13.89182751 18.7335381 14.87242563l2.7170774 0.14300521a22.79893918 22.79893918 0 0 0 21.20546682-15.36272638l259.51158924-729.54564933a23.8612558 23.8612558 0 0 0-5.31158128-24.55584682 22.3290685 22.3290685 0 0 0-23.9021142-5.43415649zM793.65694081 211.64552314l-196.63064161 552.75171747-91.91077952-246.37564122-253.62799211-102.96295445 542.16941324-203.4131218z" p-id="5828" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/search"><svg t="1656411627509" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1730" width="14" height="14"><path d="M469.333333 85.333333c211.968 0 384 172.032 384 384s-172.032 384-384 384-384-172.032-384-384 172.032-384 384-384z m0 682.666667c164.992 0 298.666667-133.674667 298.666667-298.666667 0-165.034667-133.674667-298.666667-298.666667-298.666666-165.034667 0-298.666667 133.632-298.666666 298.666666 0 164.992 133.632 298.666667 298.666666 298.666667z m362.026667 3.029333l120.704 120.661334-60.373333 60.373333-120.661334-120.704 60.330667-60.330667z" p-id="1731" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/posts"><svg t="1656411724198" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5655" width="12" height="12"><path d="M811.705761 1024H212.294239c-93.1199 0-174.823046-87.570975-174.823046-187.387854V162.322018C37.471193 69.776145 112.604921 0 212.294239 0H596.190595l7.015883 5.93161c111.74388 95.479788 185.857116 170.741078 279.614824 266.093304 29.65805 30.040735 61.165743 62.122454 96.436499 97.393211l7.271006 7.334787v459.859234c-0.063781 99.816879-81.703145 187.387854-174.823046 187.387854zM212.294239 49.94033c-72.391155 0-124.882716 47.261538-124.882716 112.381688v674.290128c0 71.94469 59.507443 137.383743 124.882716 137.383743h599.411522c65.311492 0 124.882716-65.439053 124.882716-137.383743V397.417876c-32.528184-32.464404-61.73977-62.250016-89.356836-90.377328-90.951355-92.418312-163.278729-165.957521-269.601245-257.163999H212.294239z" fill="#6c757d" p-id="5656"></path><path d="M936.588477 449.526752h-212.326129c-99.753099 0-187.324073-81.703145-187.324073-174.823046V49.94033a25.002055 25.002055 0 0 1 49.94033 0v224.763376c0 65.311492 65.502834 124.882716 137.383743 124.882716h212.326129a25.002055 25.002055 0 1 1 0 49.94033z" fill="#6c757d" p-id="5657"></path></svg></a></div>
+        <div><a href="/archive"><svg t="1656411795742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7334" width="12" height="12"><path d="M884.224 522.24H504.32V141.824c0-16.896-13.824-30.72-30.72-30.72-120.32 0-233.472 47.616-317.952 134.144S26.112 445.952 29.184 566.784c2.56 114.688 49.152 222.72 131.072 304.128 81.92 81.408 189.952 128 304.64 130.56h10.24c117.76 0 227.84-45.568 312.32-128.512 86.528-85.504 133.632-199.68 132.608-321.024-0.512-2.048-1.536-29.696-35.84-29.696z m-140.288 307.712c-74.752 73.728-173.056 112.64-277.504 110.592-205.824-4.608-370.688-169.472-375.296-374.784-3.072-104.448 35.84-202.752 108.544-277.504 65.536-67.072 151.552-107.52 243.712-114.688v378.88c0 16.896 13.824 30.72 30.72 30.72 129.024 0 311.296 0 382.976 0.512-6.144 93.184-46.08 179.712-113.152 246.272z" fill="#6c757d" p-id="7335"></path><path d="M603.136 11.264c-8.192-0.512-15.872 3.072-22.016 8.704-5.632 5.632-9.216 13.824-9.216 22.016v378.88c0 16.896 13.824 30.72 30.72 30.72h378.88c16.896 0 30.72-13.824 30.72-30.72 0-223.744-183.808-407.552-409.088-409.6z m30.208 378.88V74.24c167.424 16.384 301.056 150.016 315.904 315.904h-315.904z" fill="#6c757d" p-id="7336"></path></svg></a></div>
+        <div id="light-dark" style="cursor: pointer;"><a><svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg></a></div>
+        
+    </div>
+
+    
+</div>
+
+            <div id="toc">📜</div>
+        
+    
+    
+</div>
+</div>
+        <div id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-main 
+     container-page 
+">
+
+    <div class="desc">
+        
+        <span>
+            
+            <svg t="1656736000388" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7409" width="12" height="12"><path d="M524.885333 338.986667L200.362667 663.466667c-17.28 15.274667-27.989333 36.693333-29.696 56.234666v133.76l130.730666 0.085334c22.784-1.621333 43.989333-12.245333 61.013334-31.701334l322.688-322.645333-160.213334-160.213333z m60.373334-60.330667l160.170666 160.213333 102.144-102.144a19.712 19.712 0 0 0 0-27.861333L715.093333 176.426667a19.456 19.456 0 0 0-27.605333 0L585.258667 278.613333zM701.312 85.333333c27.946667 0 54.741333 11.136 74.282667 30.848l132.309333 132.309334a105.045333 105.045333 0 0 1 0 148.565333L424.874667 879.957333c-29.824 34.346667-72.106667 55.466667-120.448 58.794667H85.333333v-42.666667l0.128-179.84c3.626667-44.970667 24.576-86.826667 56.448-114.944l485.12-485.034666A104.789333 104.789333 0 0 1 701.269333 85.333333z" p-id="7410" fill="#adb5bd"></path></svg>
+            2023-05-24&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737270708" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23838" width="11" height="11"><path d="M824.264 95.36c0-23.859 25.043-44.16 48.902-44.16s49.714 20.301 49.714 44.16v190.08c0 23.859-19.054 52.868-42.913 52.868h-190.08c-23.859 0-46.696-25.96-46.696-49.819s22.55-46.249 46.409-46.249h82.025C702.344 175.534 610.22 155.853 512 155.853c-206.775 0-360.398 149.372-360.398 356.147 0 206.775 153.623 358.23 360.398 358.23 206.775 0 357.467-151.455 357.467-358.23 0-23.859 23.634-50.706 53.413-50.706 29.78 0 49.92 26.847 49.92 50.706 0 254.493-206.307 460.8-460.8 460.8-254.493 0-460.8-206.307-460.8-460.8C51.2 257.507 257.507 51.2 512 51.2c122.4 0 226.684 33.296 312.264 117.369 0.358 0.351 0.358-24.052 0-73.209z" p-id="23839" fill="#adb5bd"></path></svg>
+            2023-05-24&nbsp;&nbsp;&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
+            4046 字</span>&nbsp;
+        <span>
+            
+            <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
+            9 分钟</span>
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux%E5%9F%BA%E7%A1%80">Linux基础</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div>
+        
+    </div>
+    
+    <div class="toc">
+        
+        <div class="page-operation">
+            <div><a href="#"><img src="/imgs/icons/arrow-up-circle.svg" alt=""></a></div>
+            <div></div>
+            <div><a href="https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/5.-vim%E7%BC%96%E8%BE%91%E5%99%A8/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
+        </div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#用户相关概念">用户相关概念</a></li>
+    <li><a href="#用户管理">用户管理</a></li>
+    <li><a href="#密码管理">密码管理</a></li>
+    <li><a href="#用户组管理">用户组管理</a></li>
+    <li><a href="#用户提权">用户提权</a>
+      <ul>
+        <li><a href="#su">su</a></li>
+        <li><a href="#sudo">sudo</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+
+    <div class='content  content '>
+        <h2 id="用户相关概念">用户相关概念</h2>
+<p><code>Linux</code>下我们为什么要创建用户？</p>
+<ol>
+<li>系统上的每一个进程(运行的程序)，都需要一个特定的用户运行。</li>
+<li>通常在公司是使用普通用户管理服务器，因为<code>root</code>权限过大，容易造成故障。</li>
+</ol>
+<p>用户相关文件</p>
+<p><code>/etc/passwd</code>: 记录用户信息，但是不记录密码。</p>
+<pre tabindex="0"><code>[root@localhost ~]# head -1 /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+</code></pre><p><code>/etc/passwd</code>以<code>:</code>为分隔符，共可分为7列。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">第一列</th>
+<th style="text-align:center">第二列</th>
+<th style="text-align:center">第三列</th>
+<th style="text-align:center">第四列</th>
+<th style="text-align:center">第五列</th>
+<th style="text-align:center">第六列</th>
+<th style="text-align:center">第七列</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">root</td>
+<td style="text-align:center">x</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">root</td>
+<td style="text-align:center">/root</td>
+<td style="text-align:center">/bin/bash</td>
+</tr>
+<tr>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">密码占位符</td>
+<td style="text-align:center">用户UID</td>
+<td style="text-align:center">组GID</td>
+<td style="text-align:center">注释信息</td>
+<td style="text-align:center">用户家目录</td>
+<td style="text-align:center">用户登陆shell</td>
+</tr>
+</tbody>
+</table>
+<p><code>/etc/shadow</code>: 密码信息。</p>
+<pre tabindex="0"><code>[root@localhost ~]# head -1 /etc/shadow
+root:$xxx6:19489:0:99999:7:2:66275:
+</code></pre><p><code>/etc/shadow</code>以<code>:</code>为分隔符，共可分为9列。</p>
+<table>
+<thead>
+<tr>
+<th>第一列</th>
+<th>root</th>
+<th>用户名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第二列</td>
+<td>$xxx6</td>
+<td>密码密文，!!表示无密码</td>
+</tr>
+<tr>
+<td>第三列</td>
+<td>19489</td>
+<td>最近修改密码的日期，从1970年1月1日到现在过了多少天。</td>
+</tr>
+<tr>
+<td>第四列</td>
+<td>0</td>
+<td>密码最少使用天数。0表示随时可以修改，如果是n那么就表示设置了新密码以后n天之内都不能再修改这个密码。</td>
+</tr>
+<tr>
+<td>第五列</td>
+<td>99999</td>
+<td>密码最长使用天数。99999表示不强制在多少天内修改密码。</td>
+</tr>
+<tr>
+<td>第六列</td>
+<td>7</td>
+<td>密码到期提醒。当账号的密码有效期限快要到的时候，系统会根据设定的数值发出警告信息提醒用户密码还有多少天就要过期了。</td>
+</tr>
+<tr>
+<td>第七列</td>
+<td>2</td>
+<td>密码过期后系统会强制要求用户必须重新设置新的密码才可以继续登录使用，如果密码过期几天后到了这个宽限时间用户依然没有登录更改密码，那么这么密码就会失效。</td>
+</tr>
+<tr>
+<td>第八列</td>
+<td>66275</td>
+<td>账号失效日期。从1970年1月1日起，过多少天后，账户失效。</td>
+</tr>
+<tr>
+<td>第九列</td>
+<td></td>
+<td>保留字段</td>
+</tr>
+</tbody>
+</table>
+<p>系统对用户的约定，在<code>CentOS7</code>系统之前，<code>UID1-499</code>用于系统用户，而<code>500+</code>则用于普通用户。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">用户UID</th>
+<th>系统中约定的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td>超级管理员，最高权限，有着极强的破坏能力</td>
+</tr>
+<tr>
+<td style="text-align:center">1~200</td>
+<td>系统用户，用来运行系统自带的进程，默认已创建</td>
+</tr>
+<tr>
+<td style="text-align:center">201~999</td>
+<td>系统用户，用来运行用户安装的程序，所以此类用户无需登陆系统</td>
+</tr>
+<tr>
+<td style="text-align:center">1000+</td>
+<td>普通用户，正常可以登陆系统的用户，权限比较小，能执行的任务有限</td>
+</tr>
+</tbody>
+</table>
+<h2 id="用户管理">用户管理</h2>
+<p><strong>创建用户</strong></p>
+<p>在用户创建的过程需要参考<code>/etc/login.defs</code>和<code>/etc/default/useradd</code>这两个文件。如果在创建用户时指定了参数,则会覆盖<code>/etc/login.defs</code>和<code>/etc/default/useradd</code>相关内容。</p>
+<p><code>/etc/login.defs</code>相关配置内容</p>
+<pre tabindex="0"><code>[root@localhost ~]# egrep -v &#34;^$|#&#34; /etc/login.defs 
+MAIL_DIR	/var/spool/mail      邮箱地址
+PASS_MAX_DAYS	99999            密码最长使用天数
+PASS_MIN_DAYS	0                密码最短使用天数
+PASS_MIN_LEN	5                密码的长度
+PASS_WARN_AGE	7                密码到期前7天警告
+UID_MIN                  1000    UID从1000开始
+UID_MAX                 60000    UID从6w结束
+SYS_UID_MIN               201    系统用户UID从201开始
+SYS_UID_MAX               999    系统用户UID最大到999
+GID_MIN                  1000    GID从1000开始
+GID_MAX                 60000    GID最大到6w结束
+SYS_GID_MIN               201    系统GID从201开始
+SYS_GID_MAX               999    系统GID醉倒到999结束
+CREATE_HOME	yes                  给用户创建家目录
+UMASK           077
+USERGROUPS_ENAB yes
+ENCRYPT_METHOD SHA512 
+</code></pre><p><code>/etc/default/useradd</code>相关配置内容</p>
+<pre tabindex="0"><code>[root@localhost ~]# egrep -v &#34;^$|#&#34; /etc/default/useradd
+GROUP=100
+HOME=/home               用户默认的家目录
+INACTIVE=-1              用户不失效
+EXPIRE=                  过期时间
+SHELL=/bin/bash          默认登陆shell
+SKEL=/etc/skel           默认用户拷贝的环境变量
+CREATE_MAIL_SPOOL=yes    创建邮箱
+</code></pre><p><code>useradd</code>命令用于新增用户，常用选项及说明如下表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-u</td>
+<td>指定用户的UID</td>
+</tr>
+<tr>
+<td style="text-align:center">-g</td>
+<td>指定用户的默认组，只能有一个</td>
+</tr>
+<tr>
+<td style="text-align:center">-G</td>
+<td>指定用户的附加组，逗号隔开可以添加多个</td>
+</tr>
+<tr>
+<td style="text-align:center">-d</td>
+<td>指定要创建的用户的家目录</td>
+</tr>
+<tr>
+<td style="text-align:center">-s</td>
+<td>指定要创建用户的bash shell</td>
+</tr>
+<tr>
+<td style="text-align:center">-c</td>
+<td>指定要创建用户的注释信息</td>
+</tr>
+<tr>
+<td style="text-align:center">-M</td>
+<td>给创建的用户不创建家目录</td>
+</tr>
+<tr>
+<td style="text-align:center">-r</td>
+<td>创建系统账户，默认无家目录</td>
+</tr>
+</tbody>
+</table>
+<p>创建<code>ennan</code>用户，<code>UID5001</code>,基本组<code>ops</code>，附加组<code>dev</code> 注释信息:<code>20220523</code>,登陆<code>shell:/bin/bash</code></p>
+<p>用<code>groupadd</code>添加相关的用户组</p>
+<pre tabindex="0"><code>[root@localhost ~]# groupadd ops
+[root@localhost ~]# groupadd dev
+</code></pre><p>创建用户并验证</p>
+<pre tabindex="0"><code>[root@localhost ~]# useradd ennan -u 5001 -g ops -G dev -c &#34;20220523&#34; -s /bin/bash
+[root@localhost ~]# id ennan
+uid=5001(ennan) gid=1000(ops) groups=1000(ops),1001(dev)
+[root@localhost ~]# grep &#34;ennan&#34; /etc/passwd
+ennan:x:5001:1000:20220523:/home/ennan:/bin/bash
+</code></pre><p>创建<code>mysql</code>系统用户，不建立用户家目录，并指定<code>nologin</code>使用户无法登陆系统。</p>
+<pre tabindex="0"><code># 使用-r可创建系统用户，默认不创建家目录
+[root@localhost ~]# useradd mysql -r -s /sbin/nologin
+[root@localhost ~]# id mysql
+uid=995(mysql) gid=995(mysql) groups=995(mysql)
+[root@localhost ~]# grep &#34;mysql&#34; /etc/passwd
+mysql:x:995:995::/home/mysql:/sbin/nologin
+</code></pre><p><strong>修改用户</strong></p>
+<p><code>usermod</code>命令用于更改用户信息，常用选项及说明如下表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-a</td>
+<td>更改用户组的时候，保存原有组不变，直接追加</td>
+</tr>
+<tr>
+<td style="text-align:center">-m</td>
+<td>将家目录内容移至新位置 (仅于 -d 一起使用)</td>
+</tr>
+<tr>
+<td style="text-align:center">-l</td>
+<td>指定要修改的用户的登录名</td>
+</tr>
+<tr>
+<td style="text-align:center">-u</td>
+<td>指定用户的UID</td>
+</tr>
+<tr>
+<td style="text-align:center">-g</td>
+<td>指定用户的默认组，只能有一个</td>
+</tr>
+<tr>
+<td style="text-align:center">-G</td>
+<td>指定用户的附加组，逗号隔开可以添加多个</td>
+</tr>
+<tr>
+<td style="text-align:center">-d</td>
+<td>指定要创建的用户的家目录</td>
+</tr>
+<tr>
+<td style="text-align:center">-s</td>
+<td>指定要创建用户的bash shell</td>
+</tr>
+<tr>
+<td style="text-align:center">-c</td>
+<td>指定要创建用户的注释信息</td>
+</tr>
+</tbody>
+</table>
+<p>将用户<code>ennan</code>的<code>UID</code>改为<code>9999</code>，并添加附属组<code>dba</code></p>
+<p>查看用户<code>ennan</code>的信息</p>
+<pre tabindex="0"><code>[root@localhost ~]# id ennan
+uid=5001(ennan) gid=1000(ops) groups=1000(ops),1001(dev)
+</code></pre><p>添加用户组<code>dba</code></p>
+<pre tabindex="0"><code>[root@localhost ~]# groupadd dba
+# 若不加-a选项，附属组不会保留原先设置的组，会直接变更为dba
+[root@localhost ~]# usermod ennan -u 9999 -aG dba
+[root@localhost ~]# id ennan
+uid=9999(ennan) gid=1000(ops) groups=1000(ops),1001(dev),1002(dba)
+</code></pre><p>将用户<code>ennan</code>的用户名修改为<code>wu</code>，家目录修改问<code>/tmp/wu</code></p>
+<p>更改用户家目录时应加上<code>-m</code>选项，会将用户家目录移动到<code>/tmp</code>目录</p>
+<pre tabindex="0"><code>[root@localhost ~]# usermod ennan -md /tmp/wu -l wu
+[root@localhost ~]# id wu
+uid=9999(wu) gid=1000(ops) groups=1000(ops),1001(dev),1002(dba)
+# 更改用户家目录加了-m选项
+[root@localhost ~]# su - wu
+Last login: Mon Aug  5 15:43:49 CST 2019 on pts/1
+[wu@localhost ~]$ 
+</code></pre><p>更改用户家目录，没加<code>-m</code>选项，因为没有移动之前的家目录到<code>/tmp/test</code>目录，会提示家目录不存在。</p>
+<pre tabindex="0"><code>[root@localhost ~]# usermod wu -d /tmp/test
+[root@localhost ~]# su - wu
+Last login: Mon Aug  5 15:45:28 CST 2019 on pts/1
+su: warning: cannot change directory to /tmp/test: No such file or directory
+-bash-4.2$ 
+</code></pre><p><strong>删除用户</strong></p>
+<p><code>userdel</code>命令用于删除用户，常用选项及说明如下表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-r</td>
+<td>删除用户的同时删除他的家目录</td>
+</tr>
+</tbody>
+</table>
+<p>删除用户<code>user1</code>，不删除用户家目录等其他目录。</p>
+<pre tabindex="0"><code>[root@localhost ~]# userdel wu
+</code></pre><p>删除用户<code>user1</code>及其家目录</p>
+<pre tabindex="0"><code>[root@localhost ~]# userdel -r wu
+</code></pre><blockquote>
+<p>用户数据可能会放置于家目录内，-r选项删除用户时，会删除其家目录，慎用！！！</p>
+</blockquote>
+<p><strong>其他用户相关操作</strong></p>
+<p><strong>who命令</strong></p>
+<p><code>who</code>命令用于查看目前登录系统的用户信息。</p>
+<pre tabindex="0"><code>[root@localhost ~]# who
+root     tty1         2019-08-05 08:26
+root     pts/0        2019-08-05 08:27 (192.168.16.44)
+</code></pre><p><strong>whoami命令</strong></p>
+<p><code>whoami</code>用于查看当前登陆系统的用户是谁</p>
+<pre tabindex="0"><code>[root@localhost ~]# whoami
+root
+</code></pre><p><strong>w命令</strong></p>
+<p><code>w</code>命令用于显示已经登陆系统的用户列表，并显示用户正在执行的指令。</p>
+<pre tabindex="0"><code>[root@localhost ~]# w
+ 16:31:29 up  1 day,  3 users,  load average: 0.00, 0.01, 0.05
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+root     tty1                      08:26    8:04m  0.05s  0.05s -bash
+root     pts/0    192.168.16.44    08:27    3:01m  0.92s  0.92s -bash
+root     pts/1    192.168.16.44    14:42    1.00s  0.90s  0.03s w
+</code></pre><p>说明</p>
+<table>
+<thead>
+<tr>
+<th>显示信息</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16:31:29</td>
+<td>当前系统时间。</td>
+</tr>
+<tr>
+<td>up</td>
+<td>当前系统运行的时长。</td>
+</tr>
+<tr>
+<td>3 users</td>
+<td>有多少用户登陆了系统。</td>
+</tr>
+<tr>
+<td>load average</td>
+<td>当前系统负载状态。</td>
+</tr>
+<tr>
+<td>0.00</td>
+<td>1分钟内平均负载。</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td>5分钟内平均负载。</td>
+</tr>
+<tr>
+<td>0.05</td>
+<td>15分钟内平均负载</td>
+</tr>
+<tr>
+<td>JCPU</td>
+<td>该tty终端连接的所由进程占用的时间，不包括过去的后台作业时间。</td>
+</tr>
+<tr>
+<td>PCPU</td>
+<td>当前进程(即w项中显示的)所占用的时间。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="密码管理">密码管理</h2>
+<p><strong>为新用户添加密码</strong></p>
+<p>只有root才能执行才能为新用户添加密码。添加密码非为交互式和非交互式两种。</p>
+<ul>
+<li>
+<p>交互式添加密码。</p>
+<pre tabindex="0"><code>[root@localhost ~]# useradd ennan   
+[root@localhost ~]# passwd ennan
+Changing password for user ennan.
+New password: 输入密码
+BAD PASSWORD: The password is a palindrome
+Retype new password: 确认密码
+passwd: all authentication tokens updated successfully.
+</code></pre></li>
+<li>
+<p>非交互式添加密码。</p>
+<pre tabindex="0"><code>[root@localhost ~]# echo &#34;qwert&#34; | passwd --stdin ennan
+Changing password for user ennan.
+passwd: all authentication tokens updated successfully.
+</code></pre><p>。通过脚本，批量添加用户</p>
+<pre tabindex="0"><code>[root@localhost ~]# cat user.sh 
+for i in {1..100}
+do
+	useradd test$i
+	echo &#34;123456&#34; | passwd --stdin test$i
+done
+</code></pre></li>
+</ul>
+<p><strong>变更密码</strong></p>
+<p>为别人修改密码（只用root才能执行）</p>
+<pre tabindex="0"><code>[root@localhost ~]# passwd test50
+Changing password for user test50.
+New password: 
+BAD PASSWORD: The password is a palindrome
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+</code></pre><p>为自己修改密码（自己就可以）</p>
+<pre tabindex="0"><code>[test50@localhost ~]$ passwd 
+Changing password for user test50.
+Changing password for test50.
+(current) UNIX password: 
+New password: 
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+</code></pre><p><strong>生成随机密码</strong></p>
+<p>通过<code>$RANDOM</code>随机生成密码</p>
+<p><code>$RANDOM</code>生成随机数，将随机数通过<code>md5</code>加密，取加密后的<code>6-15</code>字符。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ echo $RANDOM | md5sum | cut -c 6-15
+45de81b10c
+</code></pre><p>通过<code>mkpasswd</code>随机生成密码</p>
+<pre tabindex="0"><code>[root@localhost ~]#  yum install expect -y
+# 安装扩展包
+[root@localhost ~]# mkpasswd
+7q~HfjM0g
+[root@localhost ~]# mkpasswd -l 10 -d 3 -c 2 -C 3 -s 2
+# -l 密码长度  -d 数字个数  -c 小写字母个数  -C 大写字母个数  -s 特殊字符个数
+6u36~LRSo&amp;
+</code></pre><h2 id="用户组管理">用户组管理</h2>
+<p><strong>创建用户组</strong>
+创建<code>GID</code>为<code>666</code>的用户组<code>g1</code></p>
+<pre tabindex="0"><code>[root@localhost ~]# groupadd -g 666 g1
+[root@localhost ~]# grep &#34;666&#34; /etc/group
+g1:x:666:
+</code></pre><p>创建系统用户组<code>g2</code></p>
+<pre tabindex="0"><code>[root@localhost ~]# groupadd -r g2
+[root@localhost ~]# grep &#34;g2&#34; /etc/group
+g2:x:665:
+</code></pre><p><strong>修改用户组</strong>
+将<code>g1</code>的<code>GID</code>改为<code>777</code></p>
+<pre tabindex="0"><code>[root@localhost ~]# groupmod -g 777 g1
+[root@localhost ~]# grep &#34;g1&#34; /etc/group
+g1:x:777:
+</code></pre><p>将<code>g1</code>的用户名修改为<code>gg</code></p>
+<pre tabindex="0"><code>[root@localhost ~]# groupmod g1 -n gg
+[root@localhost ~]# grep &#34;777&#34; /etc/group
+gg:x:777:
+</code></pre><p><strong>删除用户组</strong></p>
+<p>可通过<code>groupdel</code>命令删除用户组，若用户组里有用户的话，需要先删除组内的用户才可以删除该组。</p>
+<pre tabindex="0"><code>[root@localhost ~]# groupdel g1
+</code></pre><h2 id="用户提权">用户提权</h2>
+<h3 id="su">su</h3>
+<p><code>su</code>命令用于切换到其他用户，除<code>root</code>外，使用改命令需要输入密码。</p>
+<p>切换用户不改变原用户的工作目录，及其他环境变量目录。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ su root
+Password:
+[root@localhost ennan]# 
+</code></pre><p>切换用户后，同时切换到新用户的工作环境中，加载全部的环境变量。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ su - root
+Password:
+Last login: Thu May 25 18:22:34 CST 2023 on pts/0
+[root@localhost ~]#
+</code></pre><p>使用指定用户执行命令，这里以使用<code>root</code>用户执行命令为例。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ ll /root/.ssh
+ls: cannot access /root/.ssh: Permission denied
+
+[ennan@localhost ~]$ su root -c &#34;ls -l /root/.ssh&#34;
+Password:
+total 4
+-rw------- 1 root root 575 May 25 16:17 authorized_keys
+</code></pre><p><code>su</code>切换用户的缺点：需要知道用户名对应的密码，很不安全。</p>
+<h3 id="sudo">sudo</h3>
+<p>用户通过<code>sudo</code>命令，可调用指定的命令。</p>
+<p><strong>使用sudo命令</strong></p>
+<p>普通用户执行yum命令，不能成功。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ yum install wget
+Loaded plugins: fastestmirror
+You need to be root to perform this command.
+</code></pre><p>使用<code>sudo</code>命令提权，提示用户不在<code>sudoers</code>文件中。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ sudo yum install wget
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for ennan: 输入密码
+ennan is not in the sudoers file.  This incident will be reported.
+</code></pre><p>通过<code>root</code>用户执行<code>visudo</code>命令，对用户进行权限设置。</p>
+<pre tabindex="0"><code># 查看yum命令路径
+[root@localhost ~]# whereis yum
+yum: /usr/bin/yum /etc/yum /etc/yum.conf /usr/share/man/man8/yum.8
+# 修改配置
+[root@localhost ~]# visudo 
+# 添加
+ennan ALL=(ALL) /usr/bin/yum
+# 检查文件
+[root@localhost ~]# visudo -c
+/etc/sudoers: parsed OK
+</code></pre><p>登陆到<code>ennan</code>用户，检查用户的权限</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ sudo -l
+[sudo] password for ennan: 输入密码
+
+User ennan may run the following commands on localhost:
+    (ALL) /usr/bin/yum
+</code></pre><p>利用<code>sudo</code>执行<code>yum</code>命令，可以成功执行。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ sudo yum install wget
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+Package wget-1.14-18.el7_6.1.x86_64 already installed and latest version
+Nothing to do
+</code></pre><p><strong>sudo别名提权</strong></p>
+<p>可使用<code>sudo</code>中自带的别名操作, 将多个用户定义成一个组。针对用户组进行提权。
+用<code>root</code>用户执行<code>visudo</code>命令，对用户进行权限设置。</p>
+<pre tabindex="0"><code>[root@localhost ~]# visudo 
+</code></pre><p>添加如下内容设置用户组别名及命令别名</p>
+<pre tabindex="0"><code>root    ALL=(ALL)       ALL
+# 设置组别名，test2和test3为OPS组；test4为DEV组。
+User_Alias OPS = test2,test3
+User_Alias DEV = test4
+# 设置命令别名，NETWORKING为ifconfig和ping的别名
+Cmnd_Alias NETWORKING = /sbin/ifconfig, /bin/ping
+Cmnd_Alias SOFTWARE = /bin/rpm, /usr/bin/yum
+Cmnd_Alias STORAGE = /bin/mount, /bin/umount
+# 将组的别名和命令别名对应起来
+OPS ALL=(ALL) NETWORKING,SOFTWARE,STORAGE
+DEV ALL=(ALL) NETWORKING
+</code></pre><p><img src="https://images.wuennan.cn/8505400-37481e8bd9a0daf2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="设置别名及权限"></p>
+<p>检查配置</p>
+<pre tabindex="0"><code>[root@localhost ~]# visudo -c
+/etc/sudoers: parsed OK
+</code></pre><p>用<code>test3</code>用户登陆系统，查看权限</p>
+<pre tabindex="0"><code>[test3@localhost ~]$ sudo -l
+
+    .......
+    .......
+
+User test3 may run the following commands on localhost:
+    (ALL) /sbin/ifconfig, /bin/ping, /bin/rpm, /usr/bin/yum,
+        /bin/mount, /bin/umount
+</code></pre><p>用<code>test4</code>用户登陆系统，查看权限</p>
+<pre tabindex="0"><code>[test4@localhost ~]$ sudo -l
+
+    .......
+    .......
+
+User test4 may run the following commands on localhost:
+    (ALL) /sbin/ifconfig, /bin/ping
+</code></pre><p><strong>sudo用户组提权</strong></p>
+<p><code>sudo</code>可针对用户组进行提权，可使用<code>groupadd</code>将用户添加到用户组，然后给组分配<code>sudo</code>的权限。如果有新
+用户加入,直接将用户添加到该组。
+将用户添加到对应的组中</p>
+<pre tabindex="0"><code>[root@localhost ~]# groupadd group_dev
+[root@localhost ~]# groupadd group_op
+[root@localhost ~]# usermod test5 -G group_dev 
+[root@localhost ~]# usermod test6 -G group_dev 
+[root@localhost ~]# usermod test7 -G group_op
+[root@localhost ~]# id test5
+uid=3010(test5) gid=3010(test5) groups=3010(test5),6674(group_dev)
+[root@localhost ~]# id test6
+uid=3011(test6) gid=3011(test6) groups=3011(test6),6674(group_dev)
+[root@localhost ~]# id test7
+uid=3012(test7) gid=3012(test7) groups=3012(test7),6675(group_op)
+</code></pre><p>修改配置文件</p>
+<pre tabindex="0"><code>[root@localhost ~]# visudo
+</code></pre><p><code>visudo</code>主要添加了以下的内容</p>
+<pre tabindex="0"><code>Cmnd_Alias NETWORKING = /sbin/ifconfig, /bin/ping
+Cmnd_Alias SOFTWARE = /bin/rpm, /usr/bin/yum
+Cmnd_Alias STORAGE = /bin/mount, /bin/umount
+# %代表组，如果不加%，系统会认为是一个用户名
+%group_dev ALL=(ALL) NETWORKING,STORAGE
+%group_op ALL=(ALL) SOFTWARE
+</code></pre><p>检查配置文件</p>
+<pre tabindex="0"><code>[root@localhost ~]# visudo -c
+/etc/sudoers: parsed OK
+</code></pre><p>登陆到<code>test6</code>查看用户的权限</p>
+<pre tabindex="0"><code>[test6@localhost ~]$ sudo -l
+
+    .......
+    .......
+
+User test6 may run the following commands on localhost:
+    (ALL) /sbin/ifconfig, /bin/ping, /bin/mount, /bin/umount
+</code></pre><p>用<code>test7</code>用户登陆系统，查看权限</p>
+<pre tabindex="0"><code>[test7@localhost ~]$ sudo -l
+
+    .......
+    .......
+
+User test7 may run the following commands on localhost:
+    (ALL) /bin/rpm, /usr/bin/yum
+</code></pre>
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+</div>
+
+        </div>
+        <div id="footer"><div class="container-footer">
+    
+    <a href="" target="_blank">
+        
+        <span class="some">enter your icp or a interesting slogan...<span>
+        
+    </a>
+    <a id="s" href="/secrets">&nbsp;</a>
+    
+</div></div>
+    </body>
+</html>

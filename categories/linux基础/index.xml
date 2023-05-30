@@ -6,14 +6,32 @@
     <description>Recent content in Linux基础 on Ennan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 21 May 2023 20:13:41 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/categories/linux%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 May 2023 14:57:18 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/categories/linux%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用户与组</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/6.-%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84/</link>
+      <pubDate>Wed, 24 May 2023 14:57:18 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/6.-%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84/</guid>
+      <description>用户相关概念 Linux下我们为什么要创建用户？ 系统上的每一个进程(运行的程序)，都需要一个特定的用户运行。 通常在公司是使用普通用户管理服务器，因为root权限过</description>
+    </item>
+    
+    <item>
+      <title>Vim编辑器</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/5.-vim%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Mon, 22 May 2023 12:14:38 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/5.-vim%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description>vim常用的三种模式 在Linux系统中，我们常用vim对文本进行编辑。 vim有 命令模式，输入模式和底线命令模式，接下来我们将学习vim的常用用法。 vim命令模式</description>
+    </item>
+    
     <item>
       <title>Linux常用命令</title>
       <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/4.-linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sun, 21 May 2023 20:13:41 +0800</pubDate>
       
       <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/4.-linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>本章节，我们将学习 Linux 系统中常用的命令。 路径切换 比如: /etc/hostname，整个文件中包含文件名称以及文件所在的位置，我们将这个叫做路径，也就是说我们是通过</description>
+      <description>本章节，我们将认识 Linux 系统中常用的命令。 路径切换 比如: /etc/hostname，整个文件中包含文件名称以及文件所在的位置，我们将这个叫做路径，也就是说我们是通过</description>
     </item>
     
     <item>
