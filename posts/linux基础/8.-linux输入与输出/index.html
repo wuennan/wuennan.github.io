@@ -2,11 +2,11 @@
 <html lang="zh-CN"><head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="description" content="虚拟机安装CentOS7 - https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/1.-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85centos7/">
+    <meta name="description" content="Linux输入与输出 - https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/8.-linux%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/">
     <meta name="author" content="Wuennan - https://www.wuennan.cn/">
     
     <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" />
-    <title>虚拟机安装CentOS7</title>
+    <title>Linux输入与输出</title>
     <link rel="icon" type="image/png" href="/favicon.ico">
     
     <link rel="stylesheet" href="https://www.wuennan.cn/style.min.ab1affb864595dc8034de89700f09bcace7cadcc73a0e800a66ae137a366f17d.css">
@@ -27,7 +27,7 @@
 </div>
     <h1 class="title">
         
-            虚拟机安装CentOS7
+            Linux输入与输出
             
         
     </h1>
@@ -78,21 +78,21 @@
         <span>
             
             <svg t="1656736000388" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7409" width="12" height="12"><path d="M524.885333 338.986667L200.362667 663.466667c-17.28 15.274667-27.989333 36.693333-29.696 56.234666v133.76l130.730666 0.085334c22.784-1.621333 43.989333-12.245333 61.013334-31.701334l322.688-322.645333-160.213334-160.213333z m60.373334-60.330667l160.170666 160.213333 102.144-102.144a19.712 19.712 0 0 0 0-27.861333L715.093333 176.426667a19.456 19.456 0 0 0-27.605333 0L585.258667 278.613333zM701.312 85.333333c27.946667 0 54.741333 11.136 74.282667 30.848l132.309333 132.309334a105.045333 105.045333 0 0 1 0 148.565333L424.874667 879.957333c-29.824 34.346667-72.106667 55.466667-120.448 58.794667H85.333333v-42.666667l0.128-179.84c3.626667-44.970667 24.576-86.826667 56.448-114.944l485.12-485.034666A104.789333 104.789333 0 0 1 701.269333 85.333333z" p-id="7410" fill="#adb5bd"></path></svg>
-            2023-05-11&nbsp;
+            2023-05-30&nbsp;
         </span>
         <span>
             
             <svg t="1656737270708" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23838" width="11" height="11"><path d="M824.264 95.36c0-23.859 25.043-44.16 48.902-44.16s49.714 20.301 49.714 44.16v190.08c0 23.859-19.054 52.868-42.913 52.868h-190.08c-23.859 0-46.696-25.96-46.696-49.819s22.55-46.249 46.409-46.249h82.025C702.344 175.534 610.22 155.853 512 155.853c-206.775 0-360.398 149.372-360.398 356.147 0 206.775 153.623 358.23 360.398 358.23 206.775 0 357.467-151.455 357.467-358.23 0-23.859 23.634-50.706 53.413-50.706 29.78 0 49.92 26.847 49.92 50.706 0 254.493-206.307 460.8-460.8 460.8-254.493 0-460.8-206.307-460.8-460.8C51.2 257.507 257.507 51.2 512 51.2c122.4 0 226.684 33.296 312.264 117.369 0.358 0.351 0.358-24.052 0-73.209z" p-id="23839" fill="#adb5bd"></path></svg>
-            2023-05-11&nbsp;&nbsp;&nbsp;
+            2023-05-30&nbsp;&nbsp;&nbsp;
         </span>
         <span>
             
             <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
-            1226 字</span>&nbsp;
+            1784 字</span>&nbsp;
         <span>
             
             <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
-            3 分钟</span>
+            4 分钟</span>
             <div class="container-ctgtag">
 	<div class="taxonomy">
 		
@@ -116,154 +116,253 @@
         
         <div class="page-operation">
             <div><a href="#"><img src="/imgs/icons/arrow-up-circle.svg" alt=""></a></div>
-            <div><a href="https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/2.-%E8%AE%A4%E8%AF%86bash-shell/"><img src="/imgs/icons/arrow-left-circle.svg" alt=""></a></div>
-            <div><a href="https://www.wuennan.cn/posts/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/ansible%E4%BD%BF%E7%94%A8/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
+            <div><a href="https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/9.-%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE/"><img src="/imgs/icons/arrow-left-circle.svg" alt=""></a></div>
+            <div><a href="https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/7.-linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
         </div>
         
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#准备工作">准备工作</a></li>
-    <li><a href="#创建虚拟机">创建虚拟机</a></li>
-    <li><a href="#系统安装">系统安装</a></li>
-    <li><a href="#连接虚拟主机">连接虚拟主机</a></li>
+    <li><a href="#输入与输出">输入与输出</a></li>
+    <li><a href="#重定向">重定向</a></li>
+    <li><a href="#管道">管道</a></li>
   </ul>
 </nav>
     </div>
 
     <div class='content  content '>
-        <p>在初学<code>Linux</code>阶段，我们通常会使用虚拟机运行一个<code>Linux</code>的操作系统以供练习。</p>
-<p>常用的虚拟机软件有 <code>VMware Workstation</code>，<code>VirtualBox</code>，<code>Hyper-V</code>等。</p>
-<p>这里我们以 <code>VMware Workstation</code> 为例，创建一个虚拟机，并为其安装<code>CentOS 7</code>操作系统。</p>
-<h2 id="准备工作">准备工作</h2>
-<p>需要下载以下内容：</p>
-<p><strong>VMware Workstation</strong>: 虚拟化软件。</p>
-<p>推荐下载路径：<a href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html">点击下载</a></p>
-<p>下载后，请自行安装。</p>
-<p><strong>CentOS 7</strong>: 操作系统。</p>
-<p>推荐下载路径：<a href="https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Minimal-2009.iso">点击下载</a></p>
-<p><strong>MobaXterm</strong>: <code>SSH</code>终端，也可使用 <code>XShell</code>等。</p>
-<p>推荐下载路径：<a href="https://mobaxterm.mobatek.net/download.html">点击下载</a></p>
-<h2 id="创建虚拟机">创建虚拟机</h2>
-<ol>
-<li>
-<p>打开VMware Workstation ，点击”创建新的虚拟机”。</p>
-<img src="https://images.wuennan.cn/8505400-7f69c85394caedba.png#pic_center" alt="创建新的虚拟机" style="zoom:70%;" />
-</li>
-<li>
-<p>选择“自定义(高级)(C)”，并点击“下一步”。</p>
-<img src="https://images.wuennan.cn/8505400-8e2823ae881603ba.png" alt="自定义"  />
-</li>
-<li>
-<p>“硬件兼容性”选择“Workstation 14.x”</p>
-<p><img src="https://images.wuennan.cn/8505400-db0faa821213710f.png" alt="硬件兼容性"></p>
-</li>
-<li>
-<p>选择“稍后安装操作系统”。若选择“安装程序光盘映像文件”的话，虚拟机会通过默认的安装策略来部署最精简的Linux系统，而不再会询问安装设置的选项。</p>
-<p><img src="https://images.wuennan.cn/image-20230513223708112.png" alt="image-20230513223708112"></p>
-</li>
-<li>
-<p>选择要安装的操作系统。</p>
-<p><img src="https://images.wuennan.cn/8505400-b35885616a020c94.png" alt="选择操作系统"></p>
-</li>
-<li>
-<p>填写虚拟机名称并选择安装位置。</p>
-<p><img src="https://images.wuennan.cn/8505400-a0a3ea39979b152e.png" alt="选择虚拟机存放位置"></p>
-</li>
-<li>
-<p>配置虚拟机的处理器。根据自己电脑的配置，可适多分配一些资源给虚拟机。</p>
-<p><img src="https://images.wuennan.cn/8505400-a6c8af4fb6d092d0.png" alt="配置处理器"></p>
-</li>
-<li>
-<p>配置虚拟机的内存。需要注意的是，虚拟内存不应低于1GB。</p>
-<p><img src="https://images.wuennan.cn/8505400-f0eecafa7f2f3678.png" alt="配置内存"></p>
-</li>
-<li>
-<p>为虚拟机选择网络连接类型。</p>
-<p><img src="https://images.wuennan.cn/8505400-f412fcfb905fe63f.png" alt="选择网络类型"></p>
-<blockquote>
-<p><strong>桥接模式</strong>：相当于在物理主机与虚拟机网卡之间假设了一座桥梁，从而可以通过物理主机的网卡访问外网。</p>
-<p><strong>NAT模式</strong>：让VM虚拟机的网络服务发挥路由器的作用，使得通过虚拟软件模拟的主机可以通过物理主机访问外网，在真机中NAT虚拟机网卡对应的物理网卡是VMnet8。</p>
-<p><strong>仅主机模式</strong>：仅让虚拟机内的主机与物理主机通信，不能访问外网，在真机中仅主机模式模拟网卡对一个的物理网卡是VMnet1。</p>
-</blockquote>
-</li>
-<li>
-<p>选择I/O控制器的类型。</p>
-<p><img src="https://images.wuennan.cn/8505400-133dc2b913ce4f04.png" alt="I/O控制器类型"></p>
-</li>
-<li>
-<p>选择磁盘类型。</p>
-<p><img src="https://images.wuennan.cn/8505400-5b73825c26461668.png" alt="配置磁盘"></p>
-</li>
-<li>
-<p>为虚拟主机配置磁盘容量，若电脑磁盘的文件格式为NTFS，可选择“将虚拟磁盘存储为单个文件”。</p>
-<p><img src="https://images.wuennan.cn/8505400-d66091e9a5e3646a.png" alt="配置磁盘"></p>
-</li>
-<li>
-<p>选择存储磁盘文件的存放位置，默认即可。</p>
-<p><img src="https://images.wuennan.cn/8505400-b405bbc09df32dfb.png" alt="配置磁盘"></p>
-</li>
-<li>
-<p>自定义硬件，移除如打印机、声卡之类的不需要的硬件。</p>
-<p><img src="https://images.wuennan.cn/8505400-97180d1c3269f575.png" alt="移除不需要的硬件"></p>
-</li>
-<li>
-<p>双击CD/DVD，选择指定的ISO文件。</p>
-<p><img src="https://images.wuennan.cn/8505400-991400d3d9e243a0.png" alt="选择ISO文件"></p>
-</li>
-<li>
-<p>完成以上配置后，虚拟机如下图所示。</p>
-<p><img src="https://images.wuennan.cn/8505400-fb2be6c72157ea15.png" alt="最终配置"></p>
-</li>
-</ol>
-<h2 id="系统安装">系统安装</h2>
-<ol>
-<li>
-<p>在虚拟机管理界面中单机“开启此虚拟机”按钮，选择“Install CentOS 7”。</p>
-<p><img src="https://images.wuennan.cn/8505400-16d6663048e312ec.png" alt="开机界面"></p>
-<blockquote>
-<p><strong>Install CentOS 7</strong>: 安装CentOS 7。</p>
-<p><strong>Test this media &amp; install CentOS 7</strong>: 校验光盘的完整性后再安装CentOS 7。</p>
-<p><strong>Troubleshooting</strong>: 救援模式。</p>
-</blockquote>
-</li>
-<li>
-<p>选择系统安装语言后，单机<code>Continue</code>按钮。</p>
-<p><img src="https://images.wuennan.cn/8505400-b0a1e510782fceb8.png" alt="选择安装语言"></p>
-</li>
-<li>
-<p>在安装界面单击“SOFTWARE SELECTON”选项。用户可根据不同的需求选择不同的基本环境，默认使用”Minimal Install“安装即可。</p>
-<p><img src="https://images.wuennan.cn/8505400-84eb2ab0f9e812dd.png" alt="2选择安装类型"></p>
-</li>
-<li>
-<p>单击”INSTALLATION DESTINATION“选项选择安装的媒介，以及对磁盘进行分区，swap分区通常为内存的一半但不应大于16GB。</p>
-<p><img src="https://images.wuennan.cn/8505400-ae23e97520707aa3.png" alt="配置磁盘"></p>
-</li>
-<li>
-<p>关闭KDUMP和SECURITY POLICY。</p>
-</li>
-<li>
-<p>点击NETWORK&amp;HOSTNAME选项后，配置网络及主机名。</p>
-<p><img src="https://images.wuennan.cn/8505400-9465164f090e4446.png" alt="配置网络"></p>
-<p><img src="https://images.wuennan.cn/8505400-cca6e05fc7621784.png" alt="配置网络及主机名"></p>
-</li>
-<li>
-<p>最终配置如下图。</p>
-<p><img src="https://images.wuennan.cn/8505400-9e20fee5b0e7e76a.png" alt="最终配置"></p>
-</li>
-<li>
-<p>点击Begin Installation，设置root管理员密码，若坚持使用弱口令密码，需要单击2次左上角的Done按钮确认。</p>
-<p><img src="https://images.wuennan.cn/8505400-c92bb06af495c373.png" alt="设置root密码"></p>
-</li>
-<li>
-<p>安装完成后重启虚拟主机。</p>
-</li>
-</ol>
-<h2 id="连接虚拟主机">连接虚拟主机</h2>
-<ol>
-<li>打开MobaXterm，在命令行输入ssh ip地址的方式可以登陆到虚拟主机。</li>
-</ol>
-<p><img src="https://images.wuennan.cn/8505400-258e8f8eafdf5031.png" alt="Xshell连接主机"></p>
+        <h2 id="输入与输出">输入与输出</h2>
+<p>当运行一个程序时通常会自动打开三个标准文件，分别是标准输入、标准输出、错误输出。
+在<code>/dev</code>下有些关于输入与输出的文件</p>
+<pre tabindex="0"><code>[root@localhost ~]# ll /dev/std*
+# 将错误通过2输出
+lrwxrwxrwx. 1 root root 15 Aug  7 14:36 /dev/stderr -&gt; /proc/self/fd/2
+# 通过0输入
+lrwxrwxrwx. 1 root root 15 Aug  7 14:36 /dev/stdin -&gt; /proc/self/fd/0
+# 将正确的结果通过1输出
+lrwxrwxrwx. 1 root root 15 Aug  7 14:36 /dev/stdout -&gt; /proc/self/fd/1
+</code></pre><p>当我们运行一个进程的时候，会有输出。</p>
+<pre tabindex="0"><code>[root@localhost ~]# tail -f /var/log/secure
+[root@localhost ~]# ps aux | grep tail
+# 打开另一个终端，查看tail的进程号
+root       2905  0.0  0.0 107988   612 pts/0    S+   09:56   0:00 tail -f /var/log/secure
+root       2907  0.0  0.0 112704   952 pts/5    S+   09:57   0:00 grep 
+[root@localhost ~]# ll /proc/2905/fd
+total 0
+# 0代表输入，通过/dev/pts/0输入
+lrwx------. 1 root root 64 Aug  8 09:58 0 -&gt; /dev/pts/0
+# 1代表标准输出，通过/dev/pts/1输出
+lrwx------. 1 root root 64 Aug  8 09:58 1 -&gt; /dev/pts/0
+# 2代表错误输出，通过/dev/pts/1输出
+lrwx------. 1 root root 64 Aug  8 09:57 2 -&gt; /dev/pts/0
+lr-x------. 1 root root 64 Aug  8 09:58 3 -&gt; /var/log/secure
+lr-x------. 1 root root 64 Aug  8 09:58 4 -&gt; anon_inode:inotify
+</code></pre><p>通过<code>tty</code>我们可以看出<code>/dev/pts/0</code>是当前执行命令的终端。</p>
+<pre tabindex="0"><code>[root@localhost ~]# tty
+/dev/pts/0
+</code></pre><p>即，通过当前终端输入，标准输出和错误输出也都通过当前终端输出。
+根据上述案例，我们可知：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">文件描述符</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标准输入（STDIN）</td>
+<td style="text-align:center">0</td>
+<td>默认时键盘输入，也可以是其他文件或者命令的输出</td>
+</tr>
+<tr>
+<td style="text-align:center">标准输出(STDOUT)</td>
+<td style="text-align:center">1</td>
+<td>默认输出到屏幕</td>
+</tr>
+<tr>
+<td style="text-align:center">错误输出（STDERR）</td>
+<td style="text-align:center">2</td>
+<td>默认输出到屏幕</td>
+</tr>
+<tr>
+<td style="text-align:center">文件名称（filename）</td>
+<td style="text-align:center">3+</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>验证</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://images.wuennan.cn/8505400-3f4b611016b4cc1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输出"></p>
+<p>通过键盘输入，正确和错误的结果都会输出到当前的窗口。</p>
+<pre tabindex="0"><code>[root@localhost ~]# ls /
+bin   dev  home  lib64  mnt     opt   root  sbin  sys   tmp  var   web2
+boot  etc  lib   media  oldboy  proc  run   srv   test  usr  web1  web3
+[root@localhost ~]# lsld /
+-bash: lsld: command not found
+</code></pre><h2 id="重定向">重定向</h2>
+<p>我们可通过输出重定向，改变输出内容的位置。输出重定向有如下几种方式，如表格所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">操作符</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标准覆盖输出重定向</td>
+<td style="text-align:center">&gt;</td>
+<td>将程序输出的正确结果输出到指定的文件中，会覆盖文件原有的内容。</td>
+</tr>
+<tr>
+<td style="text-align:center">标准追加输出重定向</td>
+<td style="text-align:center">&raquo;</td>
+<td>将程序输出的正确结果以追加的方式输出到指定文件，不会覆盖原有文件。</td>
+</tr>
+<tr>
+<td style="text-align:center">错误覆盖输出重定向</td>
+<td style="text-align:center">2&gt;</td>
+<td>将程序的错误结果输出到执行的文件中，会覆盖文件原有的内容。</td>
+</tr>
+<tr>
+<td style="text-align:center">错误追加输出重定向</td>
+<td style="text-align:center">2&raquo;</td>
+<td>将程序输出的错误结果以追加的方式输出到指定文件，不会覆盖原有文件。</td>
+</tr>
+<tr>
+<td style="text-align:center">混合输出重定向</td>
+<td style="text-align:center">&amp;&gt;</td>
+<td>将程序的正确和错误结果输出到执行的文件中，会覆盖文件原有的内容</td>
+</tr>
+<tr>
+<td style="text-align:center">混合追加输出重定向</td>
+<td style="text-align:center">&amp;&raquo;</td>
+<td>将程序输出的正确和错误结果以追加的方式输出到指定文件，不会覆盖原有文件</td>
+</tr>
+<tr>
+<td style="text-align:center">标准输入重定向</td>
+<td style="text-align:center">&laquo;</td>
+<td>将命令中接收输入的途径由默认的键盘更改为指定的文件或命令</td>
+</tr>
+<tr>
+<td style="text-align:center">重定向<code>&gt;</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>将程序输出的正确结果输出到指定的文件中，会覆盖文件原有的内容。</p>
+<pre tabindex="0"><code>[root@localhost ~]# echo &#34;hello&#34; &gt; 1.txt
+[root@localhost ~]# cat 1.txt 
+hello
+[root@localhost ~]# echo &#34;My name is ennan&#34; &gt; 1.txt
+[root@localhost ~]# cat 1.txt 
+My name is ennan
+</code></pre><p>追加重定向<code>&gt;&gt;</code></p>
+<p>将程序输出的正确结果以追加的方式输出到指定文件，不会覆盖原有文件。</p>
+<pre tabindex="0"><code>[root@localhost ~]# echo &#34;hello&#34; &gt; 1.txt
+[root@localhost ~]# echo &#34;My name is ennan&#34; &gt;&gt; 1.txt
+[root@localhost ~]# cat 1.txt 
+hello
+My name is ennan
+</code></pre><p>错误重定向<code>2&gt;</code></p>
+<p>将程序的错误结果输出到执行的文件中，会覆盖文件原有的内容。</p>
+<pre tabindex="0"><code>[root@localhost ~]# aksd 2&gt; 1.txt 
+[root@localhost ~]# cat 1.txt 
+-bash: aksd: command not found
+[root@localhost ~]# asdf 2&gt; 1.txt 
+[root@localhost ~]# cat 1.txt 
+-bash: asdf: command not found
+</code></pre><p>错误追加重定向<code>2&gt;&gt;</code></p>
+<p>将程序输出的错误结果以追加的方式输出到指定文件，不会覆盖原有文件。</p>
+<pre tabindex="0"><code>[root@localhost ~]# lsd 2&gt; 1.txt 
+[root@localhost ~]# lsd 2&gt;&gt; 1.txt 
+[root@localhost ~]# cat 1.txt 
+-bash: lsd: command not found
+-bash: lsd: command not found
+</code></pre><p>将正确的输出和错误输出保存到不同的文件中。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ find /etc/ -name &#34;*.conf&#34; 1&gt;a 2&gt;b
+[ennan@localhost ~]$ cat a
+# a中全部为标准的正确输入
+/etc/resolv.conf
+/etc/depmod.d/dist.conf
+[ennan@localhost ~]$ cat b
+# b中为错误输出
+find: ‘/etc/grub.d’: Permission denied
+find: ‘/etc/lvm/archive’: Permission denied
+</code></pre><p>混合输出重定向<code>&amp;&gt;</code></p>
+<p>将正确的输出和错误输出保存到同一个文件中。</p>
+<pre tabindex="0"><code>[ennan@localhost ~]$ find /etc/ -name &#34;*.conf&#34; &amp;&gt; c
+[ennan@localhost ~]$ cat c 
+# c中既有正确输出，也有错误输出
+/etc/resolv.conf
+find: ‘/etc/grub.d’: Permission denied
+</code></pre><p>当我们运行一个脚本的时候，会有很多信息被输出到屏幕，干扰我们工作。</p>
+<pre tabindex="0"><code>[root@localhost ~]# cat ping.sh 
+ping -c1 192.168.55.130
+if [ $? -eq 0 ];then
+    echo &#34;192.168.55.130 is up.&#34; 
+else
+    echo &#34;192.168.55.130 is down.&#34; 
+fi
+[root@localhost ~]# ./ping.sh 
+PING 192.168.55.130 (192.168.55.130) 56(84) bytes of data.
+64 bytes from 192.168.55.130: icmp_seq=1 ttl=64 time=0.084 ms
 
+--- 192.168.55.130 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.084/0.084/0.084/0.000 ms
+192.168.55.130 is up.
+</code></pre><p>我们可以将输出结果放到<code>/dev/null</code></p>
+<pre tabindex="0"><code>[root@localhost ~]# cat ping.sh 
+ping -c1 192.168.55.130 &amp;&gt; /dev/null 
+if [ $? -eq 0 ];then
+    echo &#34;192.168.55.130 is up.&#34; 
+else
+    echo &#34;192.168.55.130 is down.&#34; 
+fi
+[root@localhost ~]# ./ping.sh 
+192.168.55.130 is up.
+</code></pre><p>输入重定向<code>&lt;</code></p>
+<p>常用于脚本打印菜单。</p>
+<pre tabindex="0"><code>[root@localhost ~]# cat test.sh 
+cat &lt;&lt;-EOF
++--- --- ---- ---- --- ----+
+| ======================== | 
+| 虚拟机基本管理 v5.0      |
+| by wuennan                   |
+| ======================== | 
+| 1. 安装 KVM              |
+| 2. 安装或重置 CentOS-6.9 | 
+| 3. 安装或重置 CentOS-7.4 | 
+| 5. 安装或重置 Windows-7  | 
+| 6. 删除所有虚拟机        |
+| q. 退出管理程序          |
++------ --- --- ---- --- --+ 
+EOF
+</code></pre><h2 id="管道">管道</h2>
+<p><strong>管道技术</strong>：将左侧的命令的标准输出, 交给右侧命令的标准输入。</p>
+<pre tabindex="0"><code>[root@localhost ~]# ll /etc/ | wc -l
+# 将ll的输出结果交给wc处理
+176
+</code></pre><p><strong>tee</strong>可在将上一条命令的输出保存为一个文件
+<img src="https://images.wuennan.cn/8505400-9642d6f13715eaba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tee"></p>
+<pre tabindex="0"><code>[root@localhost ~]# ll /etc/ | tee 1.txt | wc -l
+176
+[root@localhost ~]# cat 1.txt 
+total 1044
+-rw-r--r--.  1 root root     16 Aug 25  2018 adjtime
+-rw-r--r--.  1 root root   1518 Jun  7  2013 aliases
+</code></pre><p><code>xargs</code>用于参数传递，主要让一些不支持管道的命令可以使用管道技术。</p>
+<pre tabindex="0"><code>[root@localhost ~]# which cat | xargs ls -l
+-rwxr-xr-x. 1 root root 54080 Apr 11  2018 /usr/bin/cat
+</code></pre>
     </div>
 
     

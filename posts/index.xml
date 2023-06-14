@@ -6,7 +6,52 @@
     <description>Recent content in Posts on Ennan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 24 May 2023 14:57:18 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jun 2023 12:15:27 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux软件安装</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/11.-linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Thu, 01 Jun 2023 12:15:27 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/11.-linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</guid>
+      <description>RPM RPM全称 Redhat Package Manager 缩写，由红帽开发用于软件包的安装升级卸载与查询。 rpm常用选项及说明如下表： 选项 说明 i 安装在rpm的软件包 v 显示安装的详细信息 h 显示安装的进度</description>
+    </item>
+    
+    <item>
+      <title>压缩与解压</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/10.-%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B/</link>
+      <pubDate>Wed, 31 May 2023 17:09:34 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/10.-%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B/</guid>
+      <description>在Linux常用的压缩格式如下表： 格式 压缩工具 .zip zip压缩工具（*） .gz gzip压缩工具，只能压缩文件，会删除原文件(通常配合tar使用) .bz2 bzip2压缩工具，只</description>
+    </item>
+    
+    <item>
+      <title>文件查找</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/9.-%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE/</link>
+      <pubDate>Wed, 31 May 2023 11:55:28 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/9.-%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE/</guid>
+      <description>文件查找 find命令可以根据不同的条件来进行查找文件，可根据文件名称、文件大小、文件修改时间、属主属组、权限、等方式查找相应的文件。 find基本用法 find命令</description>
+    </item>
+    
+    <item>
+      <title>Linux输入与输出</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/8.-linux%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/</link>
+      <pubDate>Tue, 30 May 2023 18:49:29 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/8.-linux%E8%BE%93%E5%85%A5%E4%B8%8E%E8%BE%93%E5%87%BA/</guid>
+      <description>输入与输出 当运行一个程序时通常会自动打开三个标准文件，分别是标准输入、标准输出、错误输出。 在/dev下有些关于输入与输出的文件 [root@localhost ~]# ll /dev/std* # 将错误通过2输出 lrwxrwxrwx. 1 root root</description>
+    </item>
+    
+    <item>
+      <title>Linxu基础权限</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/7.-linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Sat, 27 May 2023 19:13:18 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/7.-linux%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</guid>
+      <description>基础权限 用户权限 在Linux系统中，针对文件定义了三种身份，分别是属主(owner)、属组(group)、其他人(others)，每一种身份又对应三种权限，分别</description>
+    </item>
+    
     <item>
       <title>用户与组</title>
       <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/6.-%E7%94%A8%E6%88%B7%E4%B8%8E%E7%BB%84/</link>
@@ -59,6 +104,15 @@
       
       <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/1.-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85centos7/</guid>
       <description>在初学Linux阶段，我们通常会使用虚拟机运行一个Linux的操作系统以供练习。 常用的虚拟机软件有 VMware Workstation，VirtualBox，Hyper-V</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.wuennan.cn/posts/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/ansible%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/ansible%E4%BD%BF%E7%94%A8/</guid>
+      <description>一、Ansible配置文件 [toc] 1. 配置文件优先级 配置文件名称 优先级 文件位置 ANSIBLE_CONFIG 1 定义变量 ansible.cfg 2 当前项目目录中 .ansible.cfg 3 当前执行用户的家目录 /etc/ansible/ansible.cfg 4 默认配置文件位置 验证优先级 [root@manager ~]# export</description>
     </item>
     
   </channel>

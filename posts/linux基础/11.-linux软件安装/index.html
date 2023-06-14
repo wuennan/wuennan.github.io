@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Linux软件安装 - https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/11.-linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/">
+    <meta name="author" content="Wuennan - https://www.wuennan.cn/">
+    
+    <meta name="msvalidate.01" content="B46311949B856F2A7015F366FB3CE878" />
+    <title>Linux软件安装</title>
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="https://www.wuennan.cn/style.min.ab1affb864595dc8034de89700f09bcace7cadcc73a0e800a66ae137a366f17d.css">
+    
+    <script type="text/javascript" src="/main.js" defer></script>
+    
+</head>
+<body class="active-animate cool">
+        <div id="header"><div class="container-header">
+    <div id="vars" class="container-vars" style="display: none;">
+	{
+		"isSingleColumnOfPostList": true,
+		"hasFoldAllCodeBlocks": false,
+		"svgColor": "",
+		"en": false,
+		"dark": false
+	}
+</div>
+    <h1 class="title">
+        
+            Linux软件安装
+            
+        
+    </h1>
+
+    <div class="container-breadcrumb-nav">
+    
+    <div class="breadcrumb-nav-bar">
+        <div><a href="/"><svg t="1656411084410" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2954" width="16" height="16"><path d="M947.5 390.6l-377-290c-34.5-26.5-82.6-26.5-117.1 0l-377 290c-14 10.8-16.6 30.9-5.9 44.9 10.8 14 30.9 16.6 44.9 5.9l28.5-21.9V768c0 88.2 71.8 160 160 160h80c35.3 0 64-28.7 64-64V640c0-17.6 14.4-32 32-32h64c17.6 0 32 14.4 32 32v224c0 35.3 28.7 64 64 64h80c88.2 0 160-71.8 160-160V419.4l28.5 21.9c5.8 4.5 12.7 6.6 19.5 6.6 9.6 0 19.1-4.3 25.4-12.5 10.8-13.9 8.2-34-5.8-44.8zM816 768c0 52.9-43.1 96-96 96h-80V640c0-52.9-43.1-96-96-96h-64c-52.9 0-96 43.1-96 96v224h-80c-52.9 0-96-43.1-96-96V370.2l284.5-218.8c11.5-8.8 27.5-8.8 39 0L816 370.2V768z" fill="#6c757d" p-id="2955"></path></svg></a></div>
+        <div><a href="/nav"><svg t="1656411531924" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5827" width="16" height="16"><path d="M849.59197473 125.23018519L139.22930586 391.72854662a23.35052669 23.35052669 0 0 0-14.95414244 21.65490745c-0.12257519 9.70384955 5.61801843 18.46795771 14.40255493 22.04306141l318.42928099 129.25528056 119.51057092 320.39047893c3.06437293 8.23295069 10.35758221 13.89182751 18.7335381 14.87242563l2.7170774 0.14300521a22.79893918 22.79893918 0 0 0 21.20546682-15.36272638l259.51158924-729.54564933a23.8612558 23.8612558 0 0 0-5.31158128-24.55584682 22.3290685 22.3290685 0 0 0-23.9021142-5.43415649zM793.65694081 211.64552314l-196.63064161 552.75171747-91.91077952-246.37564122-253.62799211-102.96295445 542.16941324-203.4131218z" p-id="5828" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/search"><svg t="1656411627509" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1730" width="14" height="14"><path d="M469.333333 85.333333c211.968 0 384 172.032 384 384s-172.032 384-384 384-384-172.032-384-384 172.032-384 384-384z m0 682.666667c164.992 0 298.666667-133.674667 298.666667-298.666667 0-165.034667-133.674667-298.666667-298.666667-298.666666-165.034667 0-298.666667 133.632-298.666666 298.666666 0 164.992 133.632 298.666667 298.666666 298.666667z m362.026667 3.029333l120.704 120.661334-60.373333 60.373333-120.661334-120.704 60.330667-60.330667z" p-id="1731" fill="#6c757d"></path></svg></a></div>
+        <div><a href="/posts"><svg t="1656411724198" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5655" width="12" height="12"><path d="M811.705761 1024H212.294239c-93.1199 0-174.823046-87.570975-174.823046-187.387854V162.322018C37.471193 69.776145 112.604921 0 212.294239 0H596.190595l7.015883 5.93161c111.74388 95.479788 185.857116 170.741078 279.614824 266.093304 29.65805 30.040735 61.165743 62.122454 96.436499 97.393211l7.271006 7.334787v459.859234c-0.063781 99.816879-81.703145 187.387854-174.823046 187.387854zM212.294239 49.94033c-72.391155 0-124.882716 47.261538-124.882716 112.381688v674.290128c0 71.94469 59.507443 137.383743 124.882716 137.383743h599.411522c65.311492 0 124.882716-65.439053 124.882716-137.383743V397.417876c-32.528184-32.464404-61.73977-62.250016-89.356836-90.377328-90.951355-92.418312-163.278729-165.957521-269.601245-257.163999H212.294239z" fill="#6c757d" p-id="5656"></path><path d="M936.588477 449.526752h-212.326129c-99.753099 0-187.324073-81.703145-187.324073-174.823046V49.94033a25.002055 25.002055 0 0 1 49.94033 0v224.763376c0 65.311492 65.502834 124.882716 137.383743 124.882716h212.326129a25.002055 25.002055 0 1 1 0 49.94033z" fill="#6c757d" p-id="5657"></path></svg></a></div>
+        <div><a href="/archive"><svg t="1656411795742" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7334" width="12" height="12"><path d="M884.224 522.24H504.32V141.824c0-16.896-13.824-30.72-30.72-30.72-120.32 0-233.472 47.616-317.952 134.144S26.112 445.952 29.184 566.784c2.56 114.688 49.152 222.72 131.072 304.128 81.92 81.408 189.952 128 304.64 130.56h10.24c117.76 0 227.84-45.568 312.32-128.512 86.528-85.504 133.632-199.68 132.608-321.024-0.512-2.048-1.536-29.696-35.84-29.696z m-140.288 307.712c-74.752 73.728-173.056 112.64-277.504 110.592-205.824-4.608-370.688-169.472-375.296-374.784-3.072-104.448 35.84-202.752 108.544-277.504 65.536-67.072 151.552-107.52 243.712-114.688v378.88c0 16.896 13.824 30.72 30.72 30.72 129.024 0 311.296 0 382.976 0.512-6.144 93.184-46.08 179.712-113.152 246.272z" fill="#6c757d" p-id="7335"></path><path d="M603.136 11.264c-8.192-0.512-15.872 3.072-22.016 8.704-5.632 5.632-9.216 13.824-9.216 22.016v378.88c0 16.896 13.824 30.72 30.72 30.72h378.88c16.896 0 30.72-13.824 30.72-30.72 0-223.744-183.808-407.552-409.088-409.6z m30.208 378.88V74.24c167.424 16.384 301.056 150.016 315.904 315.904h-315.904z" fill="#6c757d" p-id="7336"></path></svg></a></div>
+        <div id="light-dark" style="cursor: pointer;"><a><svg t="1656411842215" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5086" width="12" height="12"><path d="M1007.492874 384.513055c-8.795694-34.58307-21.189627-67.666874-36.682043-99.05151-2.698679-5.397358-10.894667-3.498287-10.894666 2.598728v0.299853c0 32.484098-6.896624 63.868734-19.890263 92.554691-10.694764 23.488501-25.487523 45.077933-43.978471 64.068635-41.779547 42.679107-99.05151 66.967217-158.722299 67.26707-61.869712 0.299853-119.941284-24.188159-162.920244-68.966238-40.280281-41.979449-62.56937-98.251902-62.269516-156.323473 0.399804-59.270984 23.588452-114.94373 65.567901-156.823229 19.59041-19.59041 42.179351-35.082826 66.667364-46.077443C672.956643 71.166451 704.041426 64.469729 736.125719 64.469729h1.299364c6.097015 0 8.096037-8.096037 2.598728-10.794715C708.739126 37.982696 675.655322 25.488812 641.172203 16.493216 599.492607 5.598549 555.714038-0.098662 510.536154 0.001289 222.37722 0.700947-7.41029 237.38508 0.185992 525.444064c7.096526 271.667008 225.889418 490.559851 497.456474 497.856279 287.559228 7.796183 524.14341-220.891864 525.842579-508.551044 0.299853-44.977981-5.297407-88.656599-15.992171-130.236244z m-83.15929 301.552378c-22.588942 53.27392-54.873137 101.250434-95.953027 142.330323-41.179841 41.179841-89.056403 73.464036-142.330324 95.953027-55.172991 23.288599-113.744317 35.182777-174.314666 35.182777s-119.141675-11.794226-174.314666-35.182777c-53.27392-22.588942-101.250434-54.873137-142.330323-95.953027-41.179841-41.179841-73.464036-89.056403-95.953027-142.330323C75.749001 630.892442 63.954774 572.221164 63.954774 511.750767s11.794226-119.141675 35.182777-174.314666c22.588942-53.27392 54.873137-101.250434 95.953027-142.330323 41.179841-41.179841 89.056403-73.464036 142.330323-95.953027C392.593892 75.7642 451.26517 63.969974 511.735567 63.969974c13.99315 0 27.886348 0.599706 41.679596 1.89907C489.246577 118.643209 448.266638 198.704016 448.266638 288.360126c0 159.022152 128.836929 287.859081 287.859081 287.859081 89.156354 0 168.817357-40.580134 221.691473-104.149015 1.099462 13.09359 1.699168 26.387082 1.699168 39.680575 0 60.470397-11.794226 119.141675-35.182776 174.314666z" p-id="5087" fill="#6c757d"></path></svg></a></div>
+        
+    </div>
+
+    
+</div>
+
+            <div id="toc">📜</div>
+        
+    
+    
+</div>
+</div>
+        <div id="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-main 
+     container-page 
+">
+
+    <div class="desc">
+        
+        <span>
+            
+            <svg t="1656736000388" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7409" width="12" height="12"><path d="M524.885333 338.986667L200.362667 663.466667c-17.28 15.274667-27.989333 36.693333-29.696 56.234666v133.76l130.730666 0.085334c22.784-1.621333 43.989333-12.245333 61.013334-31.701334l322.688-322.645333-160.213334-160.213333z m60.373334-60.330667l160.170666 160.213333 102.144-102.144a19.712 19.712 0 0 0 0-27.861333L715.093333 176.426667a19.456 19.456 0 0 0-27.605333 0L585.258667 278.613333zM701.312 85.333333c27.946667 0 54.741333 11.136 74.282667 30.848l132.309333 132.309334a105.045333 105.045333 0 0 1 0 148.565333L424.874667 879.957333c-29.824 34.346667-72.106667 55.466667-120.448 58.794667H85.333333v-42.666667l0.128-179.84c3.626667-44.970667 24.576-86.826667 56.448-114.944l485.12-485.034666A104.789333 104.789333 0 0 1 701.269333 85.333333z" p-id="7410" fill="#adb5bd"></path></svg>
+            2023-06-01&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737270708" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23838" width="11" height="11"><path d="M824.264 95.36c0-23.859 25.043-44.16 48.902-44.16s49.714 20.301 49.714 44.16v190.08c0 23.859-19.054 52.868-42.913 52.868h-190.08c-23.859 0-46.696-25.96-46.696-49.819s22.55-46.249 46.409-46.249h82.025C702.344 175.534 610.22 155.853 512 155.853c-206.775 0-360.398 149.372-360.398 356.147 0 206.775 153.623 358.23 360.398 358.23 206.775 0 357.467-151.455 357.467-358.23 0-23.859 23.634-50.706 53.413-50.706 29.78 0 49.92 26.847 49.92 50.706 0 254.493-206.307 460.8-460.8 460.8-254.493 0-460.8-206.307-460.8-460.8C51.2 257.507 257.507 51.2 512 51.2c122.4 0 226.684 33.296 312.264 117.369 0.358 0.351 0.358-24.052 0-73.209z" p-id="23839" fill="#adb5bd"></path></svg>
+            2023-06-01&nbsp;&nbsp;&nbsp;
+        </span>
+        <span>
+            
+            <svg t="1656737548689" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="33866" width="12" height="12"><path d="M832.038608 64.662657H192.030028C121.255125 64.662657 63.940169 121.98845 63.940169 192.694717v446.793671C63.940169 710.205493 121.255125 767.643272 192.030028 767.643272h133.353183a63.940169 63.940169 0 0 1 55.219742 31.576328l76.099638 129.83828c12.358154 21.093031 33.790754 31.626903 55.216129 31.626903s42.832688-10.544709 55.198067-31.619678l76.222461-129.870792a63.940169 63.940169 0 0 1 55.212517-31.551041h133.54103c70.576219 0 127.732228-57.289669 127.732227-127.800865V192.391272C959.825022 121.85479 902.643727 64.662657 832.038608 64.662657zM895.884854 639.842407A63.85347 63.85347 0 0 1 832.092795 703.703103h-133.54103a127.753903 127.753903 0 0 0-110.349172 63.09847l-76.222461 129.856342a0.274545 0.274545 0 0 1 0-0.050574h-0.032512s-0.021675 0.061411-0.032512 0.061412l-76.1466-129.85273A127.804477 127.804477 0 0 0 325.383211 703.703103H192.030028A64.207489 64.207489 0 0 1 127.880338 639.488388V192.694717A64.102729 64.102729 0 0 1 192.030028 128.602826h640.00858A63.799284 63.799284 0 0 1 895.884854 192.391272v447.451135z" fill="#adb5bd" p-id="33867"></path><path d="M608.154093 288.092004A31.970084 31.970084 0 0 0 576.184009 320.062089v160.078006l-134.650049-179.278119A31.970084 31.970084 0 0 0 384.002258 320.062089v255.760676a31.970084 31.970084 0 0 0 63.940169 0v-159.958796l134.650048 179.274507a31.970084 31.970084 0 0 0 57.531703-19.200113V320.062089a31.970084 31.970084 0 0 0-31.970085-31.970085z" fill="#adb5bd" p-id="33868"></path></svg>
+            3305 字</span>&nbsp;
+        <span>
+            
+            <svg t="1656737462334" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="32892" width="12" height="12"><path d="M512 74.666667C270.933333 74.666667 74.666667 270.933333 74.666667 512S270.933333 949.333333 512 949.333333 949.333333 753.066667 949.333333 512 753.066667 74.666667 512 74.666667z m0 810.666666c-204.8 0-373.333333-168.533333-373.333333-373.333333S307.2 138.666667 512 138.666667 885.333333 307.2 885.333333 512 716.8 885.333333 512 885.333333z" p-id="32893" fill="#adb5bd"></path><path d="M695.466667 567.466667l-151.466667-70.4V277.333333c0-17.066667-14.933333-32-32-32s-32 14.933333-32 32v238.933334c0 12.8 6.4 23.466667 19.2 29.866666l170.666667 81.066667c4.266667 2.133333 8.533333 2.133333 12.8 2.133333 12.8 0 23.466667-6.4 29.866666-19.2 6.4-14.933333 0-34.133333-17.066666-42.666666z" p-id="32894" fill="#adb5bd"></path></svg>
+            7 分钟</span>
+            <div class="container-ctgtag">
+	<div class="taxonomy">
+		
+		<div class="ctg">
+			
+			
+			<a href="/categories/linux%E5%9F%BA%E7%A1%80">Linux基础</a>
+			
+		</div>
+		<div class="tag">
+			
+			
+			
+		</div>
+	</div>
+</div>
+        
+    </div>
+    
+    <div class="toc">
+        
+        <div class="page-operation">
+            <div><a href="#"><img src="/imgs/icons/arrow-up-circle.svg" alt=""></a></div>
+            <div></div>
+            <div><a href="https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/10.-%E5%8E%8B%E7%BC%A9%E4%B8%8E%E8%A7%A3%E5%8E%8B/"><img src="/imgs/icons/arrow-right-circle.svg" alt=""></a></div>
+        </div>
+        
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#rpm">RPM</a>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#升级">升级</a></li>
+        <li><a href="#卸载">卸载</a></li>
+        <li><a href="#查询">查询</a></li>
+      </ul>
+    </li>
+    <li><a href="#yum">yum</a>
+      <ul>
+        <li><a href="#yum源配置">yum源配置</a></li>
+        <li><a href="#安装-1">安装</a></li>
+        <li><a href="#升级-1">升级</a></li>
+        <li><a href="#卸载-1">卸载</a></li>
+        <li><a href="#查询-1">查询</a></li>
+        <li><a href="#其他用法">其他用法</a></li>
+      </ul>
+    </li>
+    <li><a href="#部署yum服务器">部署yum服务器</a>
+      <ul>
+        <li><a href="#部署本地yum服务器">部署本地yum服务器</a>
+          <ul>
+            <li><a href="#服务端配置">服务端配置</a></li>
+            <li><a href="#客户端配置">客户端配置</a></li>
+          </ul>
+        </li>
+        <li><a href="#搭建网络yum服务器">搭建网络yum服务器</a>
+          <ul>
+            <li><a href="#服务端配置-1">服务端配置</a></li>
+            <li><a href="#客户端配置-1">客户端配置</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#源码安装">源码安装</a></li>
+  </ul>
+</nav>
+    </div>
+
+    <div class='content  content '>
+        <h2 id="rpm">RPM</h2>
+<p><code>RPM</code>全称 <code>Redhat Package Manager</code> 缩写，由红帽开发用于软件包的安装升级卸载与查询。
+<code>rpm</code>常用选项及说明如下表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">i</td>
+<td>安装在rpm的软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">v</td>
+<td>显示安装的详细信息</td>
+</tr>
+<tr>
+<td style="text-align:center">h</td>
+<td>显示安装的进度</td>
+</tr>
+<tr>
+<td style="text-align:center">U</td>
+<td>升级软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">e</td>
+<td>卸载软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">q</td>
+<td>查看版本信息</td>
+</tr>
+<tr>
+<td style="text-align:center">qa</td>
+<td>查看所有已安装的软件包</td>
+</tr>
+<tr>
+<td style="text-align:center">ql</td>
+<td>查看软件所有的文件所在的路径</td>
+</tr>
+<tr>
+<td style="text-align:center">qc</td>
+<td>查看软件配置文件所在的路径</td>
+</tr>
+<tr>
+<td style="text-align:center">qf</td>
+<td>查看系统已安装的命令属于哪个软件包(需要用文件的绝对路径)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="安装">安装</h3>
+<p><code>rpm</code>安装本地的软件包。</p>
+<pre tabindex="0"><code>[root@localhost ~]# mount /dev/cdrom  /mnt/
+mount: /dev/sr0 is write-protected, mounting read-only 
+[root@localhost ~]# rpm -ivh /mnt/Packages/tree-1.6.0-10.el7.x86_64.rpm 
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:tree-1.6.0-10.el7                ################################# [100%]
+</code></pre><p>安装网络的软件包。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -ivh https://mirrors.aliyun.com/centos/7.6.1810/os/x86_64/Packages/vsftpd-3.0.2-25.el7.x86_64.rpm
+Retrieving https://mirrors.aliyun.com/centos/7.6.1810/os/x86_64/Packages/vsftpd-3.0.2-25.el7.x86_64.rpm
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:vsftpd-3.0.2-25.el7              ################################# [100%]
+</code></pre><h3 id="升级">升级</h3>
+<p><code>rpm</code>安装软件。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -ivh https://mirrors.aliyun.com/zabbix/zabbix/3.0/rhel/7/x86_64/zabbix-agent-3.0.9-1.el7.x86_64.rpm
+Retrieving https://mirrors.aliyun.com/zabbix/zabbix/3.0/rhel/7/x86_64/zabbix-agent-3.0.9-1.el7.x86_64.rpm
+warning: /var/tmp/rpm-tmp.7LX5Zg: Header V4 DSA/SHA1 Signature, key ID 79ea5ed4: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:zabbix-agent-3.0.9-1.el7         ################################# [100%]
+</code></pre><p>查看软件包的版本号。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -q zabbix-agent
+zabbix-agent-3.0.9-1.el7.x86_64
+</code></pre><p>通过-U选项对软件包升级。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -Uvh https://mirrors.aliyun.com/zabbix/zabbix/4.2/rhel/7/x86_64/zabbix-agent-4.2.5-1.el7.x86_64.rpm
+Retrieving https://mirrors.aliyun.com/zabbix/zabbix/4.2/rhel/7/x86_64/zabbix-agent-4.2.5-1.el7.x86_64.rpm
+warning: /var/tmp/rpm-tmp.8ZlRib: Header V4 RSA/SHA512 Signature, key ID a14fe591: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:zabbix-agent-4.2.5-1.el7         ################################# [ 50%]
+Cleaning up / removing...
+   2:zabbix-agent-3.0.9-1.el7         ################################# [100%]
+</code></pre><p>通过软件包版本号查看是否升级成功。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -q zabbix-agent
+zabbix-agent-4.2.5-1.el7.x86_64
+</code></pre><h3 id="卸载">卸载</h3>
+<p><code>rpm</code>卸载软件包</p>
+<pre tabindex="0"><code># 通过-e选项卸载软件包
+[root@localhost ~]# rpm -e zabbix-agent
+# 查看软件包是否存在
+[root@localhost ~]# rpm -q zabbix-agent
+package zabbix-agent is not installed
+</code></pre><h3 id="查询">查询</h3>
+<p><code>rpm</code>查询相关</p>
+<p>列出系统安装的所有软件包</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -qa
+byacc-1.9.20130304-3.el7.x86_64
+libproxy-0.4.11-11.el7.x86_64
+</code></pre><p>通常会配合<code>grep</code>进行模糊查询</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -qa | grep ftp
+vsftpd-3.0.2-25.el7.x86_64
+</code></pre><p>查看软件包所有文件</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -ql vsftpd
+/etc/logrotate.d/vsftpd
+/etc/pam.d/vsftpd
+/etc/vsftpd
+</code></pre><p>查看软件包的配置文件的路径</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -qc vsftpd
+/etc/logrotate.d/vsftpd
+/etc/pam.d/vsftpd
+/etc/vsftpd/ftpusers
+/etc/vsftpd/user_list
+/etc/vsftpd/vsftpd.conf
+</code></pre><p>查询已经安装的命令属于哪个软件包</p>
+<pre tabindex="0"><code># 查询的命令必须为绝对路径
+[root@localhost ~]# rpm -qf /usr/sbin/vsftpd
+vsftpd-3.0.2-25.el7.x86_64
+[root@localhost ~]# rpm -qf $(which vsftpd)
+vsftpd-3.0.2-25.el7.x86_64
+</code></pre><h2 id="yum">yum</h2>
+<p>使用<code>rpm</code>安装软件时，有些软件包会存在依赖关系，会导致软件安装失败。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -ivh /mnt/Packages/samba-4.8.3-4.el7.x86_64.rpm error: Failed dependencies:
+	libCHARSET3-samba4.so()(64bit) is needed by samba-0:4.8.3-4.el7.x86_64
+	libCHARSET3-samba4.so(SAMBA_4.8.3)(64bit) is needed by samba-0:4.8.3-4.el7.x86_64
+</code></pre><p>使用<code>yum</code>工具安装，会自动解决依赖关系，<code>yum</code>本质上安装的也是<code>.rpm</code>的安装包。</p>
+<h3 id="yum源配置">yum源配置</h3>
+<p><code>yum</code>源通常可以通过以下三种方式进行配置。</p>
+<ol>
+<li>
+<p><code>vim</code>手动编辑<code>repo</code>文件。</p>
+</li>
+<li>
+<p><code>wget</code>下载已经编辑好的<code>repo</code>文件。</p>
+<pre tabindex="0"><code>[root@localhost ~]# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+</code></pre></li>
+<li>
+<p>安装<code>release</code>软件，会释放一个<code>repo</code>文件至<code>/etc/yum.repos.d/</code>目录。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -Uvh https://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-2.el7.noarch.rpm
+Retrieving https://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-2.el7.noarch.rpm
+warning: /var/tmp/rpm-tmp.P8jQMy: Header V4 RSA/SHA512 Signature, key ID a14fe591: NOKEY
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:zabbix-release-4.2-2.el7         ################################# [100%]
+[root@localhost ~]# ls /etc/yum.repos.d/
+# /etc/yum.repos.d/下多了zabbix.repo
+CentOS-Base.repo      CentOS-Debuginfo.repo  CentOS-Sources.repo
+CentOS-Base.repo.bak  CentOS-fasttrack.repo  CentOS-Vault.repo
+CentOS-CR.repo        CentOS-Media.repo      zabbix.repo
+</code></pre></li>
+</ol>
+<p><strong>yum源配置</strong></p>
+<p>系统默认为国外的<code>yum</code>源，需要我们换成国内的<code>yum</code>源，且需要安装扩展源。</p>
+<pre tabindex="0"><code># 基本源
+[root@localhost ~]# wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+#扩展源
+[root@localhost ~]#  wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+</code></pre><p>安装<code>Nginx</code>时，需要使用到官方的<code>yum</code>源。</p>
+<pre tabindex="0"><code>[root@localhost ~]# vim /etc/yum.repos.d/nginx.repo
+[nginx]
+name=nginx repo 
+baseurl=http://nginx.org/packages/centos/7/$basearch/ 
+gpgcheck=0
+enabled=1
+# 查看可用的yum源
+[root@localhost ~]# yum repolist
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirrors.aliyun.com
+ * extras: mirrors.aliyun.com
+ * updates: mirrors.aliyun.com
+nginx                                                        | 2.9 kB  00:00:00     
+nginx/x86_64/primary_db                                      |  49 kB  00:00:19     
+repo id                     repo name                                         status
+base/7/x86_64               CentOS-7 - Base - mirrors.aliyun.com              10,019
+epel/x86_64                 Extra Packages for Enterprise Linux 7 - x86_64    13,343
+extras/7/x86_64             CentOS-7 - Extras - mirrors.aliyun.com               435
+nginx/x86_64                nginx repo                                           164
+updates/7/x86_64            CentOS-7 - Updates - mirrors.aliyun.com            2,500
+zabbix/x86_64               Zabbix Official Repository - x86_64                   93
+zabbix-non-supported/x86_64 Zabbix Official Repository non-supported - x86_64      4
+repolist: 26,558
+</code></pre><blockquote>
+<p>在使用zabbix、Docker、Nginx、OpenStack之类的程序时，都可以同通过官方网站找yum源。</p>
+</blockquote>
+<h3 id="安装-1">安装</h3>
+<p>使用网络的<code>yum</code>源安装“小火车”。</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum install sl -y
+[root@localhost ~]# sl
+                              (  ) (@@) ( )  (@)  ()    @@    O     @     O     @      O
+                         (@@@)
+                     (    )
+                  (@@@@)
+
+                (   )
+               ====        ________           	___________
+           _D _|  |_______/        \__I_I_____===__|_________|
+            |(_)---  |   H\________/ |   |        =|___ ___|      _________________
+            /     |  |   H  |  |     |   |         ||_| |_||     _|       	    \_____A
+           |      |  |   H  |__--------------------| [___] |   =|                        |
+           | ________|___H__/__|_____/[][]~\_______|       |   -|                        |
+           |/ |   |-----------I_____I [][] []  D   |=======|____|________________________|_
+         __/ =| o |=-O=====O=====O=====O \ ____Y___________|__|__________________________|_
+          |/-=|___|=    ||    ||    ||    |_____/~\___/          |_D__D__D_|  |_D__D__D_|
+           \_/      \__/  \__/  \__/  \__/      \_/               \_/   \_/    \_/   \_/
+</code></pre><p>使用<code>yum</code>安装本地软件包。</p>
+<pre tabindex="0"><code>[root@localhost ~]# ls
+samba-4.8.3-4.el7.x86_64.rpm
+[root@localhost ~]# yum localinstall samba-4.8.3-4.el7.x86_64.rpm
+# yum会联网找安装本地软件包所使用的依赖包
+Dependencies Resolved
+===========================================================================================
+ Package                Arch       Version             Repository                     Size
+===========================================================================================
+Installing:
+ samba                  x86_64     4.8.3-4.el7         /samba-4.8.3-4.el7.x86_64     1.9 M
+Installing for dependencies:
+ libldb                 x86_64     1.3.4-1.el7         base                          137 k
+ libtalloc              x86_64     2.1.13-1.el7        base                           32 k
+ libtdb                 x86_64     1.3.15-1.el7        base                           48 k
+ libtevent              x86_64     0.9.36-1.el7        base                           36 k
+ libwbclient            x86_64     4.8.3-4.el7         base                          109 k
+ pytalloc               x86_64     2.1.13-1.el7        base                           17 k
+ samba-client-libs      x86_64     4.8.3-4.el7         base                          4.8 M
+ samba-common           noarch     4.8.3-4.el7         base                          206 k
+ samba-common-libs      x86_64     4.8.3-4.el7         base                          164 k
+ samba-common-tools     x86_64     4.8.3-4.el7         base                          448 k
+ samba-libs             x86_64     4.8.3-4.el7         base                          276 k
+
+Transaction Summary
+===========================================================================================
+Install  1 Package (+11 Dependent packages)
+</code></pre><blockquote>
+<p>利用yum安装本地的软件包适用于安装大型软件。可提前将软件包下载至本地，通过yum可安装可以解决依赖关系，快速安装软件，节约软件安装的时间。</p>
+</blockquote>
+<h3 id="升级-1">升级</h3>
+<p>查看系统中哪些软件包可以升级</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum check-update
+</code></pre><p>升级软件包</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum update openssl
+</code></pre><p><code>yum update</code>可以升级系统容内核，适用于刚装完系统的服务器。</p>
+<h3 id="卸载-1">卸载</h3>
+<p>因为多个软件可能依赖于同一个文件，当卸载软件时，会同时删除依赖文件。可能会导致其他软件不萌正常使用。所以卸载软件，慎用！！！</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum remove samba -y
+</code></pre><h3 id="查询-1">查询</h3>
+<p>查询所有软件包，包括已安装的和未安装的。</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum list
+</code></pre><p>列出系统中已成功安装的软件包。</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum list installed
+</code></pre><p>列出<code>yum</code>源可用的软件仓库。</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum repolist
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirrors.aliyun.com
+ * extras: mirrors.aliyun.com
+ * updates: mirrors.aliyun.com
+repo id                                             repo name                                                                   status
+base/7/x86_64                                       CentOS-7 - Base - mirrors.aliyun.com                                        10,019
+extras/7/x86_64                                     CentOS-7 - Extras - mirrors.aliyun.com                                         435
+updates/7/x86_64                                    CentOS-7 - Updates - mirrors.aliyun.com                                      2,500
+repolist: 12,954
+</code></pre><p>查看所有的仓库，包括不可用的</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum repolist all
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirrors.aliyun.com
+ * extras: mirrors.aliyun.com
+ * updates: mirrors.aliyun.com
+repo id                                          repo name                                                             status
+base/7/x86_64                                    CentOS-7 - Base - mirrors.aliyun.com                                  enabled: 10,019
+centosplus/7/x86_64                              CentOS-7 - Plus - mirrors.aliyun.com                                  disabled
+contrib/7/x86_64                                 CentOS-7 - Contrib - mirrors.aliyun.com                               disabled
+extras/7/x86_64                                  CentOS-7 - Extras - mirrors.aliyun.com                                enabled:    435
+updates/7/x86_64                                 CentOS-7 - Updates - mirrors.aliyun.com                               enabled:  2,500
+</code></pre><p>查找命令所属的软件包</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum provides wget
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirrors.aliyun.com
+ * extras: mirrors.aliyun.com
+ * updates: mirrors.aliyun.com
+wget-1.14-18.el7.x86_64 : A utility for retrieving files using the HTTP or FTP
+                        : protocols
+Repo        : base
+wget-1.14-18.el7_6.1.x86_64 : A utility for retrieving files using the HTTP or
+                            : FTP protocols
+Repo        : updates
+wget-1.14-18.el7_6.1.x86_64 : A utility for retrieving files using the HTTP or
+                            : FTP protocols
+Repo        : @updates
+</code></pre><blockquote>
+<p>yum不需要知道命令的绝对路径,只需要知道命令即可， yum会通过所有已启用的仓库进行查找那些软件包中涵盖了需要查询的命令。</p>
+</blockquote>
+<h3 id="其他用法">其他用法</h3>
+<p><strong>缓存rpm包</strong></p>
+<p>方法一：通过修改配置文件，全局缓存rpm文件。</p>
+<pre tabindex="0"><code>[root@localhost 7]# vim /etc/yum.conf 
+[main]
+# 配置缓存的目录
+cachedir=/var/cache/yum/$basearch/$releasever
+# 0表示不缓存rpm文件，rpm=1表示缓存
+keepcache=1
+</code></pre><p>安装软件包并检查是否缓存成功</p>
+<pre tabindex="0"><code>[root@localhost 7]# yum install samba -y
+[root@localhost 7]# find /var/cache/yum/x86_64/7/ -type f -name &#34;*.rpm&#34;
+/var/cache/yum/x86_64/7/base/packages/libldb-1.3.4-1.el7.x86_64.rpm
+/var/cache/yum/x86_64/7/base/packages/libtalloc-2.1.13-1.el7.x86_64.rpm
+/var/cache/yum/x86_64/7/base/packages/libtdb-1.3.15-1.el7.x86_64.rpm
+/var/cache/yum/x86_64/7/base/packages/libtevent-0.9.36-1.el7.x86_64.rpm
+/var/cache/yum/x86_64/7/base/packages/pytalloc-2.1.13-1.el7.x86_64.rpm
+/var/cache/yum/x86_64/7/updates/packages/samba-4.8.3-6.el7_6.x86_64.rpm
+/var/cache/yum/x86_64/7/updates/packages/libwbclient-4.8.3-6.el7_6.x86_64.rpm
+/var/cache/yum/x86_64/7/updates/packages/samba-client-libs-4.8.3-6.el7_6.x86_64.rpm
+/var/cache/yum/x86_64/7/updates/packages/samba-common-4.8.3-6.el7_6.noarch.rpm
+/var/cache/yum/x86_64/7/updates/packages/samba-common-libs-4.8.3-6.el7_6.x86_64.rpm
+/var/cache/yum/x86_64/7/updates/packages/samba-common-tools-4.8.3-6.el7_6.x86_64.rpm
+/var/cache/yum/x86_64/7/updates/packages/samba-libs-4.8.3-6.el7_6.x86_64.rpm
+</code></pre><p>方法二：只下载不安装
+指定要下载的软件包及下载的路径</p>
+<pre tabindex="0"><code>[root@localhost 7]# yum install httpd -y --downloadonly --downloaddir=/tmp
+</code></pre><p>检查是否下载成功</p>
+<pre tabindex="0"><code>[root@localhost 7]# ll /tmp/
+total 2912
+-rw-r--r--. 1 root root 2844140 Jul 31 11:37 httpd-2.4.6-89.el7.centos.1.x86_64.rpm
+-rw-r--r--. 1 root root   92776 Jul 31 11:37 httpd-tools-2.4.6-89.el7.centos.1.x86_64.rpm
+-rw-r--r--. 1 root root   31264 Jul  4  2014 mailcap-2.1.41-2.el7.noarch.rpm
+drwx------. 2 root root       6 Aug 15 05:21 vmware-root_5895-1983720749
+drwx------. 2 root root       6 Aug 15 05:12 vmware-root_5911-1949641533
+drwx------. 2 root root       6 Aug 15 16:18 vmware-root_6108-960608207
+drwx------. 2 root root       6 Aug 15 04:49 vmware-root_6131-1958619680
+-rw-------. 1 root root     244 Aug 15 04:53 yum_save_tx.2019-08-15.04-53._kaSKx.yumtx
+-rw-------. 1 root root     757 Aug 15 18:48 yum_save_tx.2019-08-15.18-48.9u9Z9V.yumtx
+[root@localhost 7]# 
+</code></pre><p><strong>清除缓存</strong>
+清除所有的缓存</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum clean all
+Loaded plugins: fastestmirror
+Cleaning repos: base extras updates
+Cleaning up list of fastest mirrors
+</code></pre><p>清除缓存包</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum clean packages
+Loaded plugins: fastestmirror
+Cleaning repos: base extras updates
+0 package files removed
+</code></pre><blockquote>
+<p>执行了清除缓存的指令后，之前缓存的软件包会被删除</p>
+</blockquote>
+<p><strong>组相关指令</strong></p>
+<p>查看整组软件</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum groups list
+</code></pre><p>安装一个组软件包</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum groups install &#34;GNOME Desktop&#34;
+</code></pre><p>卸载组软件包</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum groups remove &#34;GNOME Desktop&#34;
+</code></pre><h2 id="部署yum服务器">部署yum服务器</h2>
+<p>基于软件安装速度考虑，我们可以在本地部署一个<code>yum</code>服务器。</p>
+<h3 id="部署本地yum服务器">部署本地yum服务器</h3>
+<p><code>CentOS</code>镜像中包含了大量的安装包。我们针对这些安装包，部署一个<code>yum</code>仓库，提供给其他服务器使用。</p>
+<table>
+<thead>
+<tr>
+<th>服务器</th>
+<th>客户端</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.0.0.200</td>
+<td>10.0.0.201</td>
+</tr>
+</tbody>
+</table>
+<h4 id="服务端配置">服务端配置</h4>
+<p>将<code>CentOS</code>光盘挂载到<code>/mnt</code>目录。</p>
+<pre tabindex="0"><code>[root@localhost ~]# mount /dev/cdrom /mnt/
+</code></pre><p>安装并启动vsftpd</p>
+<pre tabindex="0"><code>[root@localhost ~]# systemctl start vsftpd 
+[root@localhost ~]# systemctl status vsftpd
+● vsftpd.service - Vsftpd ftp daemon
+   Loaded: loaded (/usr/lib/systemd/system/vsftpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Thu 2019-08-15 20:51:08 CST; 5min ago
+  Process: 7767 ExecStart=/usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf (code=exited, status=0/SUCCESS)
+ Main PID: 7768 (vsftpd)
+   CGroup: /system.slice/vsftpd.service
+           └─7768 /usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf
+
+[root@localhost ~]# systemctl enable vsftpd
+</code></pre><p>修改vsftpd的配置文件</p>
+<pre tabindex="0"><code>[root@localhost ~]# egrep -v &#34;^$|#&#34; /etc/vsftpd/vsftpd.conf 
+anon_root=/mnt/Packages
+# 指定ftp共享的目录
+anonymous_enable=YES
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_std_format=YES
+listen=NO
+listen_ipv6=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+</code></pre><p>通过浏览器验证<code>vsftpd</code>是否配置成功。
+<img src="https://upload-images.jianshu.io/upload_images/8505400-1b204804d453005c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="验证ftp"></p>
+<h4 id="客户端配置">客户端配置</h4>
+<p>新建<code>repo</code>文件，将<code>baseurl</code>指向服务端</p>
+<pre tabindex="0"><code>[root@localhost ~]# cat /etc/yum.repos.d/local.repo 
+[ftp-repo]
+name = This is ftp repo
+baseurl = ftp://10.0.0.200/
+enabled =1
+gpgcheck = 0
+</code></pre><p>验证</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum repolist
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+repo id                                   repo name                                         status
+ftp-repo                                  This is ftp repo                                  436
+repolist: 436
+</code></pre><h3 id="搭建网络yum服务器">搭建网络yum服务器</h3>
+<h4 id="服务端配置-1">服务端配置</h4>
+<p>安装并启动 <code>nginx</code>服务。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+[root@localhost ~]# yum install nginx -y
+[root@localhost ~]# systemctl restart nginx
+[root@localhost ~]# systemctl enable nginx
+Created symlink from /etc/systemd/system/multi-user.target.wants/nginx.service to /usr/lib/systemd/system/nginx.service.
+[root@localhost ~]# systemctl status nginx 
+● nginx.service - nginx - high performance web server
+   Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2019-08-18 08:24:54 CST; 11s ago
+     Docs: http://nginx.org/en/docs/
+ Main PID: 1980 (nginx)
+   CGroup: /system.slice/nginx.service
+           ├─1980 nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf
+           └─1981 nginx: worker process
+
+Aug 18 08:24:54 node1 systemd[1]: Starting nginx - high performance web server...
+Aug 18 08:24:54 node1 systemd[1]: Started nginx - high performance web server.
+</code></pre><p>配置<code>nginx</code>服务，指定共享文件的目录。</p>
+<pre tabindex="0"><code>[root@localhost ~]# cat /etc/nginx/conf.d/default.conf
+server {
+    listen  80;
+    # 自己PC的ip或者服务器的域名
+    server_name 192.168.55.10;
+    # 避免中文乱码
+    charset utf-8;
+    # 存放文件的目录
+    root /data/wwwroot/yum-server;
+    location / {
+        # 索引
+        autoindex on;
+        # 显示文件大小
+        autoindex_exact_size on;
+        # 显示文件时间
+        autoindex_localtime on;
+    }
+}
+</code></pre><p>从<code>mirrors.ustc.edu.cn</code>同步安装包。</p>
+<pre tabindex="0"><code>[root@localhost ~]# rsync -avz --delete rsync://mirrors.ustc.edu.cn/centos/7/os/x86_64/Packages/ /data/wwwroot/yum-server/os/Packages/
+[root@localhost ~]# rsync -avz --delete rsync://mirrors.ustc.edu.cn/centos/7/extras/x86_64/Packages/ /data/wwwroot/yum-server/extras/Packages/
+[root@localhost ~]# rsync -avz --delete rsync://mirrors.ustc.edu.cn/centos/7/updates/x86_64/Packages/ /data/wwwroot/yum-server/updates/Packages/
+[root@localhost ~]# rsync -avz --delete rsync://mirrors.ustc.edu.cn/centos/7/centosplus/x86_64/Packages/ /data/wwwroot/yum-server/centosplus/Packages/
+</code></pre><p>使用<code>createrepo</code>创建仓库（生成<code>repodata</code>目录）。</p>
+<pre tabindex="0"><code>[root@localhost ~]# yum install -y createrepo
+[root@localhost ~]# createrepo -o /data/wwwroot/yum-server/os /data/wwwroot/yum-server/os/Packages/
+[root@localhost ~]# createrepo -o /data/wwwroot/yum-server/extras /data/wwwroot/yum-server/extras/Packages/
+[root@localhost ~]# createrepo -o /data/wwwroot/yum-server/updates /data/wwwroot/yum-server/updates/Packages/
+[root@localhost ~]# createrepo -o /data/wwwroot/yum-server/centosplus /data/wwwroot/yum-server/centosplus/Packa
+</code></pre><p>用浏览器验证<code>nginx</code>共享。
+<img src="https://upload-images.jianshu.io/upload_images/8505400-4fffee47586ab975.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="验证nginx共享">
+生成<code>repodata</code>
+<img src="https://upload-images.jianshu.io/upload_images/8505400-1ff49f1f3c1b256f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="生成repodata"></p>
+<h4 id="客户端配置-1">客户端配置</h4>
+<p><code>yum</code>源配置。</p>
+<pre tabindex="0"><code>[root@node1 ~]# cat /etc/yum.repos.d/local-httpd.repo 
+[baseurl]
+name = Base
+baseurl = http://192.168.55.10/os
+enabled = 1
+gpgcheck = 0
+
+[updates]
+name = updates
+baseurl = http://192.168.55.10/updates
+enabled = 1
+gpgcheck = 0
+
+[extras]
+name = extras
+baseurl = http://192.168.55.10/extras
+enbaled = 1
+gpgcheck = 0
+
+[centosplus]
+name = centosplus
+baseurl =  http://192.168.55.10/centosplus
+enabled = 1
+gpgcheck = 0
+</code></pre><p>客户端验证</p>
+<pre tabindex="0"><code>[root@node1 yum.repos.d]# yum repolist 
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+repo id                               repo name                              status
+baseurl                               Base                                   10,019
+centosplus                            centosplus                                103
+extras                                extras                                    435
+updates                               updates                                 2,500
+repolist: 13,057
+</code></pre><blockquote>
+<p>生产yum服务器需要定时向网络更新yum源</p>
+</blockquote>
+<h2 id="源码安装">源码安装</h2>
+<p>下载并解压源码包</p>
+<pre tabindex="0"><code>[root@node1 ~]# wget http://nginx.org/download/nginx-1.15.12.tar.gz
+[root@node1 ~]# tar xf nginx-1.15.12.tar.gz
+</code></pre><p>源码安装</p>
+<pre tabindex="0"><code>[root@node1 ~]# cd nginx-1.15.12/
+[root@node1 nginx-1.15.12]# ./configure --prefix=/soft/nginx-1.12.2
+# 配置相关的选项，并生成Makefile
+# 指定了安装路径
+[root@node1 nginx-1.15.12]# make
+# 将Makefile文件编译可执行二进制程序
+[root@node1 nginx-1.15.12]# make install
+# 将二进制文件拷贝至对应的目录中
+</code></pre><p>报错信息处理</p>
+<pre tabindex="0"><code>[root@node1 nginx-1.15.12]# ./configure --prefix=/soft/nginx-1.12.2
+./configure: error: the HTTP rewrite module requires the PCRE library.
+You can either disable the module by using --without-http_rewrite_module
+option, or install the PCRE library into the system, or build the PCRE library
+statically from the source with nginx by using --with-pcre=&lt;path&gt; option.
+# 解决方法
+[root@node1 nginx-1.15.12]# yum install pcre-devel
+
+[root@node1 nginx-1.15.12]# ./configure --prefix=/soft/nginx-1.12.2
+./configure: error: the HTTP gzip module requires the zlib library.
+You can either disable the module by using --without-http_gzip_module
+option, or install the zlib library into the system, or build the zlib library
+statically from the source with nginx by using --with-zlib=&lt;path&gt; option.
+# 解决方法
+[root@node1 nginx-1.15.12]# yum install zlib-devel
+</code></pre><p>启动并验证</p>
+<pre tabindex="0"><code># 做软连接，方便后期版本升级
+[root@node1 ~]# ln -s /soft/nginx-1.12.2/ /soft/nginx
+# 启动服务
+[root@node1 ~]# /soft/nginx/sbin/nginx 
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/8505400-064dcb16c1ab72b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="验证页面"></p>
+
+    </div>
+
+    
+
+    
+
+    
+    
+    
+
+    
+</div>
+
+        </div>
+        <div id="footer"><div class="container-footer">
+    
+    <a href="" target="_blank">
+        
+        <span class="some">enter your icp or a interesting slogan...<span>
+        
+    </a>
+    <a id="s" href="/secrets">&nbsp;</a>
+    
+</div></div>
+    </body>
+</html>
