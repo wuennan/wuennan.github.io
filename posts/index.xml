@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Ennan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 01 Jun 2023 12:15:27 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jun 2023 16:19:32 +0800</lastBuildDate><atom:link href="https://www.wuennan.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>定时任务</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/14.-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+      <pubDate>Mon, 12 Jun 2023 16:19:32 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/14.-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</guid>
+      <description>crond计划任务 Crontab配置文件记录了时间周期的含义 [root@ennan ~]# cat /etc/crontab SHELL=/bin/bash # 执行的命令解释器 PATH=/sbin:/bin:/usr/sbin:/usr/bin # 环境变量 MAILTO=root # 邮件发送给谁 # For details see man 4 crontabs # Example of job definition: # .---------------- minute (0 - 59) # 分 # |</description>
+    </item>
+    
+    <item>
+      <title>磁盘管理</title>
+      <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/12.-%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Sat, 03 Jun 2023 13:55:19 +0800</pubDate>
+      
+      <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/12.-%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86/</guid>
+      <description>本章节主要解释磁盘分区，磁盘阵列等磁盘相关知识。 磁盘分区 添加磁盘 在虚拟机中添加一个1T和4T的磁盘。 可以通过查看/dev下面的设备或者lsblk命令确认磁盘是否</description>
+    </item>
+    
     <item>
       <title>Linux软件安装</title>
       <link>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/11.-linux%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</link>
@@ -108,10 +126,10 @@
     
     <item>
       <title></title>
-      <link>https://www.wuennan.cn/posts/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/ansible%E4%BD%BF%E7%94%A8/</link>
+      <link>https://www.wuennan.cn/posts/%E9%AB%98%E6%95%88%E8%BF%90%E7%BB%B4/ansible%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wuennan.cn/posts/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/ansible%E4%BD%BF%E7%94%A8/</guid>
+      <guid>https://www.wuennan.cn/posts/%E9%AB%98%E6%95%88%E8%BF%90%E7%BB%B4/ansible%E4%BD%BF%E7%94%A8/</guid>
       <description>一、Ansible配置文件 [toc] 1. 配置文件优先级 配置文件名称 优先级 文件位置 ANSIBLE_CONFIG 1 定义变量 ansible.cfg 2 当前项目目录中 .ansible.cfg 3 当前执行用户的家目录 /etc/ansible/ansible.cfg 4 默认配置文件位置 验证优先级 [root@manager ~]# export</description>
     </item>
     
