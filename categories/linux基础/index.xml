@@ -121,7 +121,7 @@
       <pubDate>Thu, 11 May 2023 14:43:31 +0800</pubDate>
       
       <guid>https://www.wuennan.cn/posts/linux%E5%9F%BA%E7%A1%80/1.-%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85centos7/</guid>
-      <description>在初学Linux阶段，我们通常会使用虚拟机运行一个Linux的操作系统以供练习。 常用的虚拟机软件有 VMware Workstation，VirtualBox，Hyper-V</description>
+      <description>本章节我们将学习如何安装创建一个Linux学习环境。 在初学Linux阶段，我们通常会使用虚拟机运行一个Linux的操作系统以供练习。 在windows上常用的虚拟</description>
     </item>
     
   </channel>
